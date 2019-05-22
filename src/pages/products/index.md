@@ -4,10 +4,10 @@ title: Our Coffee
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
 description: >-
-  Kaldi isiiii the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+  Kaldi isiiii asdasd the ultimate spot for coffee lovers who want to learn
+  about their java’s origin and support the farmers that grew it. We take coffee
+  production, roasting and brewing seriously and we’re glad to pass that
+  knowledge to anyone.
 intro:
   blurbs:
     - image: /img/coffee.png
@@ -39,7 +39,7 @@ intro:
         sale. The full price you pay goes to the artist.
   heading: What we offer
   description: >
-    Kaldi isiii the ultimate spot for coffee lovers who want to learn about
+    Kaldi isiiizzxcx the ultimate spot for coffee lovers who want to learn about
     their java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
