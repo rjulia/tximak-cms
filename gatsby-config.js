@@ -2,9 +2,9 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Tximak Ilepandegia - Tu peluqueria de confianza en Zumaia',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'Tximak es una peluqueria ubicada en Zumaia con mas de 35 años de experiencia, con alta experiencia en cortes a medida, peinados de fiesta y bodas. tambein prudes encontrar tratamientos de botos capilares, bioplaxtia, brusing plus y depilaciones con laser',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -29,6 +29,22 @@ module.exports = {
       options: {
         path: `${__dirname}/src/img`,
         name: 'images',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Asap`,
+            subsets: [`latin`],
+            variants: [`300`, `400`, `700`]
+          },
+          {
+            family: `Raleway`,
+            variants: [`400`, `700`]
+          },
+        ],
       },
     },
     'gatsby-plugin-sharp',

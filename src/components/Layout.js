@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import { OutstandingHeader, Footer, Navbar } from './Index'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 
@@ -44,6 +43,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
+      <OutstandingHeader />
       <Navbar />
       <div>{children}</div>
       <Footer />
