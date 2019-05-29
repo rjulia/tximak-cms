@@ -32,6 +32,17 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+  - name: "Common"
+    label: "common"
+    create: true
+    files:
+      - name: 'header'
+        label: "Header"
+        file: "src/pages/header/index.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "header"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Numero de telefono", name: "telephone", widget: "string"}
   - name: "pages"
     label: "Pages"
     files:

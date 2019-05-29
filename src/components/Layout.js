@@ -1,10 +1,13 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { OutstandingHeader, Footer, Navbar } from './Index'
+import { Footer, Navbar } from './Index'
+import { Header } from '../components/Header/Header'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
+import { graphql } from 'gatsby'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ headerData = null, children }) => {
+  console.log(headerData)
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -43,12 +46,28 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <OutstandingHeader />
+      <Header data={headerData} />
       <Navbar />
       <div>{children}</div>
       <Footer />
     </div>
   )
 }
+
+export const query = graphql`
+  fragment LayoutFragment on Query {
+    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "header" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            telephone
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default TemplateWrapper

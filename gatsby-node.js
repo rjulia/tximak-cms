@@ -29,9 +29,16 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    // Filter out the footer, navbar, and meetups so we don't create pages for those
+    const postOrPage = result.data.allMarkdownRemark.edges.filter(edge => {
+      if (edge.node.frontmatter.templateKey === "header") {
+        return false;
+      } else {
+        return !Boolean(edge.node.fields.slug.match(/^\/meetups\/.*$/));
+      }
+    });
 
-    posts.forEach(edge => {
+    postOrPage.forEach(edge => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
