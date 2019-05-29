@@ -56,7 +56,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Tag pages:
     let tags = []
     // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
+    postOrPage.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags)
       }

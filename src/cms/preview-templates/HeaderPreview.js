@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { HeaderTemplate } from '../../components/Header/Header'
 
 const HeaderPreview = ({ entry }) => {
-  console.log(entry)
   const data = entry.getIn(['data']).toJS();
+  console.log(data)
   return <HeaderTemplate data={data} />
 }
 

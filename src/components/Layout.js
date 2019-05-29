@@ -56,7 +56,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
 
 export const query = graphql`
   fragment LayoutFragment on Query {
-    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "header" } } }) {
+    headerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "header" } } }) {
       edges {
         node {
           id
