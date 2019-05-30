@@ -14,7 +14,7 @@ slideshow:
     subHeading: uno mas cortito para el subtitulo
   thirdpicture:
     heading: A ver si esto sale
-    image: /img/iban-malo-9.jpg
+    image: /img/la-ruta-del-flych-de-zumaia.jpg
     imageAlt: el guapo
     subHeading: vamos a ver que hacemos
 ---
