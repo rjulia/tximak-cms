@@ -57,7 +57,25 @@ export const pageQuery = graphql`
           frontmatter {
             title
             slideshow {
-              firstpicture{
+              firstpicture {
+                heading
+                subHeading
+                image{ 
+                  id
+                  publicURL
+                }
+                imageAlt
+              }
+              secondpicture {
+                heading
+                subHeading
+                image{ 
+                  id
+                  publicURL
+                }
+                imageAlt
+              }
+              thirdpicture {
                 heading
                 subHeading
                 image
