@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
+import { Carousel } from "../components/index";
 //import Helmet from "react-helmet";
 
 
@@ -11,7 +12,11 @@ import "../components/all.sass";
 export const HomePageTemplate = ({ home }) => {
   console.log(home)
   return (
-    <p>{home.title}</p>
+    <Fragment>
+      <Carousel />
+      <p>{home.title}</p>
+
+    </Fragment>
   );
 };
 
@@ -51,6 +56,14 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            slideshow {
+              firstpicture{
+                heading
+                subHeading
+                image
+                imageAlt
+              }
+            }
           }
         }
       }
