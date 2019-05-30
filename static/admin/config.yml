@@ -32,9 +32,8 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-  - name: "Common"
+  - name: "common"
     label: "common"
-    create: true
     files:
       - name: 'header'
         label: "Header"

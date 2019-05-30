@@ -4,7 +4,6 @@ import { HeaderTemplate } from '../../components/Header/Header'
 
 const HeaderPreview = ({ entry }) => {
   const data = entry.getIn(['data']).toJS();
-  console.log(data)
   return <HeaderTemplate data={data} />
 }
 

@@ -6,7 +6,6 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 class ServiceRoll extends React.Component {
   render() {
     const { data } = this.props
-    console.log("la data desde servi" + data.allMarkdownRemark)
     const { edges: services } = data.allMarkdownRemark
 
     return (
