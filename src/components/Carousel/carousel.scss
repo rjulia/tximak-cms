@@ -1,14 +1,11 @@
 @import "../variables.sass";
 
 .slick-slider {
-  height: calc(100vh - 150px);
+
 
   .caroulsel__container {
     overflow-y: hidden;
     position: relative;
-
-    display: flex;
-    height: calc(100vh - 150px);
   }
 
   .caroulsel__image {
@@ -33,6 +30,14 @@
       color: $primary;
       font-size: 30px;
       font-family: $mainFont;
+    }
+  }
+
+  @media (min-width: $mobile) {
+    height: 400px;
+
+    .caroulsel__container {
+      height: 400px;
     }
   }
 }

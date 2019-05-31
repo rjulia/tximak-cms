@@ -26,7 +26,8 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        right: "20px"
+        left: "20px",
+        zIndex: "5"
       }}
       onClick={onClick}
     />
@@ -56,11 +57,20 @@ export default class SimpleSlider extends React.Component {
             const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             return (
               <div key={key} className="caroulsel__container">
-                <img className="full-width-image caroulsel__image margin-top-0" src={imageSrc} alt="" />
-                <div className="caroulsel__text">
-                  <h1>{slideshow[key].heading}</h1>
-                  <h2>{slideshow[key].subHeading}</h2>
+                <div className="full-width-image margin-top-0" style={{
+                  backgroundImage: `url(${
+                    imageSrc
+                    })`,
+                  backgroundPosition: `top left`,
+                  backgroundAttachment: `fixed`,
+                }}>
+                  <div className="caroulsel__text" >
+                    <h1>{slideshow[key].heading}</h1>
+                    <h2>{slideshow[key].subHeading}</h2>
+                  </div>
+
                 </div>
+
               </div>
             )
           })
