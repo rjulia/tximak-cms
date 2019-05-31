@@ -3,7 +3,6 @@ import "./OutstandingHeader.sass"
 
 export const HeaderTemplate = ({ data }) => {
   const { title, telephone } = data
-  console.log(data)
   return (
     <div className="is-flex  outHedaer">
       <div className="column">{title} </div>

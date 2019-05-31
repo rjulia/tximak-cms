@@ -10,12 +10,10 @@ import Layout from "../components/Layout";
 import "../components/all.sass";
 
 export const HomePageTemplate = ({ home }) => {
-  console.log(home)
   return (
     <Fragment>
-      <Carousel />
+      <Carousel slideshow={home.slideshow} />
       <p>{home.title}</p>
-
     </Fragment>
   );
 };
@@ -23,7 +21,6 @@ export const HomePageTemplate = ({ home }) => {
 class HomePage extends React.Component {
   render() {
     const { data } = this.props;
-    console.log(this.props)
     const {
       data: { headerData },
     } = this.props;
@@ -31,7 +28,6 @@ class HomePage extends React.Component {
 
     return (
       <Layout headerData={headerData}>
-
         <HomePageTemplate home={home} />
       </Layout>
     );
@@ -61,8 +57,11 @@ export const pageQuery = graphql`
                 heading
                 subHeading
                 image{ 
-                  id
-                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
                 imageAlt
               }
@@ -70,15 +69,24 @@ export const pageQuery = graphql`
                 heading
                 subHeading
                 image{ 
-                  id
-                  publicURL
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
                 }
                 imageAlt
               }
               thirdpicture {
                 heading
                 subHeading
-                image
+                image{ 
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
                 imageAlt
               }
             }
