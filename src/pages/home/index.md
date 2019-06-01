@@ -9,21 +9,25 @@ location:
 tratement:
   firstTratement:
     heading: Cortes
+    image: /img/icon_1.png
     subHeading: >-
       “Cortes adaptados a cada persona, creando su propio estilo y realzando su
       belleza natural”
   fourTratement:
     heading: Keratina
+    image: /img/icon_4.png
     subHeading: >-
       “Nuestro tratamiento especializado en Keratina, podemos quitar volumen,
       encrespados, y dejar que tu pelo sea liso durante largo tiempo”
   secondTratement:
     heading: Color
+    image: /img/icon_2.png
     subHeading: >-
       “Coloración muy natural con ADN de frutas. Resultados de alta calidad y el
       mejor brillo para tu cabello”
   threeTratement:
     heading: Fiestas Ceremonios
+    image: /img/icon_3.png
     subHeading: >-
       “Recogidos actuales, informales y con estilo, bien sea para fiestas,
       ocasiones especiales, novias o ceremonias”
