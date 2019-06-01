@@ -10,14 +10,15 @@ import Layout from "../components/Layout";
 import "../styles/all.sass";
 
 export const HomePageTemplate = ({ home }) => {
+  console.log(home)
   return (
-    <Fragment>
-      <Logo />
+    <div className="app">
+      <Logo logo={home.logo} />
       <Carousel slideshow={home.slideshow} />
       <Services />
       <Team />
       <Location />
-    </Fragment>
+    </div>
   );
 };
 
@@ -55,6 +56,13 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            logo { 
+                  childImageSharp {
+                    fluid(maxWidth: 400, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
             slideshow {
               firstpicture {
                 heading
