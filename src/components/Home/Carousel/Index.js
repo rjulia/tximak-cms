@@ -1,36 +1,23 @@
 import React from "react";
 import Slider from "react-slick";
 import "./carousel.scss";
+import { ArrowIcon } from "../../../Assets/index";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        right: "20px",
-        zIndex: "5"
-      }}
-      onClick={onClick}
-    />
+    <div className={className} onClick={onClick}>
+      <ArrowIcon className={"icon-arrow icon-arrow__next"} />
+    </div>
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        left: "20px",
-        zIndex: "5"
-      }}
-      onClick={onClick}
-    />
+    <div className={className} onClick={onClick}>
+      <ArrowIcon className={"icon-arrow"} />
+    </div>
   );
 }
 
@@ -57,12 +44,11 @@ export default class SimpleSlider extends React.Component {
             const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             return (
               <div key={key} className="caroulsel__container">
+
                 <div className="full-width-image margin-top-0" style={{
                   backgroundImage: `url(${
                     imageSrc
                     })`,
-                  backgroundPosition: `top left`,
-                  backgroundAttachment: `fixed`,
                 }}>
                   <div className="caroulsel__text" >
                     <h1>{slideshow[key].heading}</h1>

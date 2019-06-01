@@ -26,6 +26,66 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Title, name: title, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {
+              label: "Location",
+              name: "location",
+              required: true,
+              widget: "object",
+              fields:
+                [
+                  { label: "Name", name: "name", widget: "string" },
+                  { label: "Google Maps Link", name: "mapsLink", widget: "string" },
+                  { label: texto, name: body, widget: markdown}
+                ],
+            }
+          - {
+              label: "Tratamientos",
+              name: "tratement",
+              widget: "object",
+              fields: [
+                {
+                    label: "Tratamiento 1",
+                    name: "firstTratement",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Sub Heading", name: "subHeading", widget: "string" },
+                      ]
+                },
+                {
+                    label: "Tratamiento 2",
+                    name: "secondTratement",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Sub Heading", name: "subHeading", widget: "string" },
+                      ]
+                },
+                {
+                    label: "Tratamiento 3",
+                    name: "threeTratement",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Sub Heading", name: "subHeading", widget: "string" },
+                      ]
+                },
+                {
+                    label: "Tratamiento 4",
+                    name: "fourTratement",
+                    widget: "object",
+                    fields:
+                      [
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Sub Heading", name: "subHeading", widget: "string" },
+                      ]
+                },
+              ]
+            }
           - {
               label: "SlideShow",
               name: "slideshow",
@@ -75,6 +135,15 @@ collections:
                   }
                   
                 ]
+            }
+          - {
+              label: Nuestro equipo, 
+              name: ourteam, 
+              widget: object,
+              fields: [
+                { label: Title, name: title, widget: string},
+                { label: texto, name: body, widget: markdown}
+              ]
             }
 
       

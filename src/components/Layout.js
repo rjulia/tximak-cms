@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Header } from '../components/Header/Header'
-import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { graphql } from 'gatsby'
+import { Header } from "./Home";
 
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()

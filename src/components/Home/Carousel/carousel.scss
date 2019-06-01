@@ -1,0 +1,111 @@
+@import "../../../styles/variables.sass";
+
+.slick-slider {
+  margin-bottom: 50px;
+
+  .caroulsel__container {
+    overflow-y: hidden;
+    position: relative;
+
+    .full-width-image {
+      height: 100vh;
+      background-position: right;
+
+    }
+  }
+
+  .slick-arrow {
+    background-color: rgba($primary, 0.5);
+    width: 70px;
+    height: 80px;
+    z-index: 10;
+
+    &:hover {
+      background-color: rgba($primary, 0.9);
+    }
+
+    &.slick-next {
+      right: 0;
+    }
+
+    &.slick-prev {
+      left: 0;
+
+    }
+
+    &:before {
+      display: none
+    }
+
+    .icon-arrow {
+      display: flex;
+      align-content: center;
+      padding: 8px 5px 5px 0;
+
+      svg {
+        height: 70px;
+        width: 60px;
+        fill: $secondary;
+      }
+
+      &:hover {
+        svg {
+          fill: $primary-invert
+        }
+      }
+
+      &.icon-arrow__next {
+        padding-top: 5px;
+
+        svg {
+          transform: rotate(180deg)
+        }
+      }
+    }
+  }
+
+  .caroulsel__text {
+    position: absolute;
+    bottom: 10%;
+    width: 85vw;
+    background: rgba(#fff, 0.9);
+    padding: 20px;
+
+    h1 {
+      color: $secondary;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      font-family: $secondaryFont;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: $primary;
+      font-size: 20px;
+      line-height: 24px;
+      font-family: $mainFont;
+    }
+  }
+
+  @media (min-width: $mobile) {
+    .caroulsel__text {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 50%;
+      background: none;
+
+      h1 {
+        font-size: 36px;
+        line-height: 40px;
+      }
+
+      h2 {
+        font-size: 30px;
+        line-height: 36px;
+      }
+
+    }
+  }
+}

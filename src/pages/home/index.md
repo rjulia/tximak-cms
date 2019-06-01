@@ -4,7 +4,7 @@ title: Meet other JavaScript Developers in Wakanda
 slideshow:
   firstpicture:
     heading: La vida no es perfecta pero tu pelo puede serlo
-    image: /img/31061581-autumn-woman-portrait-with-creative-makeup.jpg
+    image: /img/screenshot-2019-05-31-at-16.10.10.png
     imageAlt: chica con el pelo largo
     subHeading: Tratamientos de alisado con queratina
   secondpicture:
