@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Carousel, Team, Services, Location, Logo } from "../components/Home/index";
@@ -64,18 +64,46 @@ export const pageQuery = graphql`
               firstTratement {
                 heading
                 subHeading
+                image{ 
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
               fourTratement {
                 heading
                 subHeading
+                image{ 
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
               secondTratement {
                 heading
                 subHeading
+                image{ 
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
               threeTratement {
                 heading
                 subHeading
+                image{ 
+                  childImageSharp {
+                    fluid(maxWidth: 2048, quality: 100) {
+                    ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
             slideshow {

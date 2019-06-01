@@ -12,10 +12,10 @@ const index = ({ tratement }) => {
 
           {
             Object.keys(tratement).map((key, idx) => {
-
+              const imageSrc = !!tratement[key].image.childImageSharp ? tratement[key].image.childImageSharp.fluid.src : tratement[key].image
               return (
                 <div key={idx} className={`column is-half services__${idx}`}>
-                  <i className="services__icon">III</i>
+                  <img src={imageSrc} alt="" className="services__icon" />
                   <h2 className="services__title">{tratement[key].heading}</h2>
                   <h3 className="services__text">{tratement[key].subHeading}</h3>
 
