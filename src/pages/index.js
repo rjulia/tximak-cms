@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { Carousel, Team, Services, Location } from "../components/Home/index";
+import { Carousel, Team, Services, Location, Logo } from "../components/Home/index";
 //import Helmet from "react-helmet";
 
 
@@ -12,6 +12,7 @@ import "../styles/all.sass";
 export const HomePageTemplate = ({ home }) => {
   return (
     <Fragment>
+      <Logo />
       <Carousel slideshow={home.slideshow} />
       <Services />
       <Team />
