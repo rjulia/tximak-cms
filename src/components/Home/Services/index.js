@@ -1,21 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './services.scss';
 
-export default class index extends Component {
+const index = ({ tratement }) => {
 
+  console.log(tratement)
 
-  render() {
-    return (
-      <div className="container services">
-        <div className="section">
-          <div className="columns is-multiline">
-            <div className="column is-half">1</div>
-            <div className="column is-half">2</div>
-            <div className="column is-half">3</div>
-            <div className="column is-half">4</div>
-          </div>
+  return (
+    <div className="container is-fluid services">
+      <div className="container">
+        <div className="columns is-multiline">
+
+          {
+            Object.keys(tratement).map((key, idx) => {
+
+              return (
+                <div key={idx} className={`column is-half services__${idx}`}>
+                  <i className="services__icon">III</i>
+                  <h2 className="services__title">{tratement[key].heading}</h2>
+                  <h3 className="services__text">{tratement[key].subHeading}</h3>
+
+                </div>
+              )
+
+            })}
+
         </div>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default index

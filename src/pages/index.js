@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { Carousel, Team, Services, Location, Logo } from "../components/Home/index";
 //import Helmet from "react-helmet";
-
-
 import Layout from "../components/Layout";
-
 import "../styles/all.sass";
 
 export const HomePageTemplate = ({ home }) => {
@@ -15,7 +12,7 @@ export const HomePageTemplate = ({ home }) => {
     <div className="app">
       <Logo logo={home.logo} />
       <Carousel slideshow={home.slideshow} />
-      <Services />
+      <Services tratement={home.tratement} />
       <Team />
       <Location />
     </div>
@@ -63,6 +60,24 @@ export const pageQuery = graphql`
                     }
                   }
                 }
+            tratement {
+              firstTratement {
+                heading
+                subHeading
+              }
+              fourTratement {
+                heading
+                subHeading
+              }
+              secondTratement {
+                heading
+                subHeading
+              }
+              threeTratement {
+                heading
+                subHeading
+              }
+            }
             slideshow {
               firstpicture {
                 heading
