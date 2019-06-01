@@ -22,7 +22,7 @@ function SamplePrevArrow(props) {
 }
 
 
-export default class SimpleSlider extends React.Component {
+export default class Carousel extends React.Component {
   render() {
     const { slideshow } = this.props
     var settings = {
