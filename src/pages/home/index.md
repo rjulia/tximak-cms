@@ -51,6 +51,8 @@ ourteam:
   body: >-
     Un equipo de tres profesionales capacitado para satisfacer a todo tipo de
     gente
+  image: /img/flavor_wheel.jpg
+  imageAlt: la cafeteria de olimpia
   title: Nuestro Equipos
 ---
 
