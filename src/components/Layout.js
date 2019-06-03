@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import useSiteMetadata from './SiteMetadata'
 import { graphql } from 'gatsby'
 import { Header } from "./Home";
+import Navbar from "./Navbar";
 
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
@@ -16,7 +17,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
 
       </Helmet>
       <Header data={headerData} />
-
+      <Navbar />
       <div>{children}</div>
     </div>
   )

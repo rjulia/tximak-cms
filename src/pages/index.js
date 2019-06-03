@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Carousel, Team, Services, Location, Logo } from "../components/Home/index";
 //import Helmet from "react-helmet";
 import Layout from "../components/Layout";
@@ -10,7 +10,9 @@ export const HomePageTemplate = ({ home }) => {
   console.log(home)
   return (
     <div className="app">
-      <Logo logo={home.logo} />
+      <Link to="/" title="Logo">
+        <Logo logo={home.logo} />
+      </Link>
       <Carousel slideshow={home.slideshow} />
       <Services tratement={home.tratement} />
       <Team ourteam={home.ourteam} />
