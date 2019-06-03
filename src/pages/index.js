@@ -13,8 +13,8 @@ export const HomePageTemplate = ({ home }) => {
       <Logo logo={home.logo} />
       <Carousel slideshow={home.slideshow} />
       <Services tratement={home.tratement} />
-      <Team />
-      <Location />
+      <Team ourteam={home.ourteam} />
+      <Location location={home.location} />
     </div>
   );
 };
@@ -60,6 +60,15 @@ export const pageQuery = graphql`
                     }
                   }
                 }
+            ourteam {
+              body
+              title
+            }
+            location {
+              body
+              mapsLink
+              name
+            }
             tratement {
               firstTratement {
                 heading

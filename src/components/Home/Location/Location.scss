@@ -1,0 +1,16 @@
+.localitation__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .localitation__text--container,
+  .localitation__container--map {
+    flex: 1 1 50%;
+    height: auto;
+    min-height: 80vh;
+  }
+
+
+}

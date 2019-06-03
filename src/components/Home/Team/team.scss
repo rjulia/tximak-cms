@@ -1,0 +1,42 @@
+@import "../../../styles/variables.sass";
+
+.team__container {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .team__title {
+    flex: 1 100%;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    height: 150px;
+    align-items: center;
+
+    h2 {
+      color: $primary;
+      font-size: 40px;
+      font-family: $secondaryFont;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .team__container--image {
+    flex: 1 1 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .team__text--container {
+    flex: 1 1 50%;
+    padding: 100px;
+    font-family: $mainFont;
+    font-size: 24px;
+    text-align: center;
+  }
+}

@@ -146,7 +146,9 @@ collections:
               widget: object,
               fields: [
                 { label: Title, name: title, widget: string},
-                { label: texto, name: body, widget: markdown}
+                { label: texto, name: body, widget: markdown},
+                { label: "Image", name: "image", widget: "image" },
+                { label: "Image Description", name: "imageAlt", widget: "string" }
               ]
             }
 
