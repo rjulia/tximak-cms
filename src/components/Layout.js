@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
+  console.log(headerData)
   return (
     <div>
       <Helmet>
