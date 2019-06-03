@@ -3,7 +3,7 @@ templateKey: home-page
 title: Meet other JavaScript Developers in Wakanda
 logo: /img/logo.png
 location:
-  body: "Etxezarreta, 21 \PZUMAIA (Gipuzkoa) \P\n\netxabeantto@hotmail.com\P\P\n\nPida cita al telefono:\P943 86 04 49\n\n\P\PHoraio de atención al público:\P\n\nLunes a Jueves:\PMañana: 9:00 a 13:00 \PTardes: 3:30 a 20:00\n\n\P\PViernes:\PIninterrumpido: 9:00 a 20:00 \P\P\n\nSábado: \PIninterrumpido: 9:00 a 16:00\n\n\P\PSígenos en:"
+  body: "Etxezarreta, 21 \PZUMAIA (Gipuzkoa) \P<br>\n\netxabeantto@hotmail.com\P\P\n\nPida cita al telefono:\P943 86 04 49\n\n\P\PHoraio de atención al público:\P\n\nLunes a Jueves:\PMañana: 9:00 a 13:00 \PTardes: 3:30 a 20:00\n\n\P\PViernes:\PIninterrumpido: 9:00 a 20:00 \P\P\n\nSábado: \PIninterrumpido: 9:00 a 16:00\n\n\P\PSígenos en:"
   mapsLink: 'https://goo.gl/maps/uXdxV8KUuR4AgpbV8'
   name: Localización
 tratement:
@@ -51,6 +51,8 @@ ourteam:
   body: >-
     Un equipo de tres profesionales capacitado para satisfacer a todo tipo de
     gente
+  image: /img/flavor_wheel.jpg
+  imageAlt: la cafeteria de olimpia
   title: Nuestro Equipos
 ---
 
