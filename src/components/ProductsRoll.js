@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ProductsRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: product } = data.allMarkdownRemark;
-    console.log(product);
     return product && product.map(({ node: product }) => (
 
       <div key={product.id} className="product__item">

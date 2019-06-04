@@ -7,12 +7,14 @@ import Navbar from "./Navbar";
 
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
-  console.log(headerData)
-  let logo
-  if (headerData.edges[1].node.frontmatter.logo === null) {
-    logo = headerData.edges[0].node
-  } else {
-    logo = headerData.edges[1].node
+
+  let logo = undefined;
+  if (headerData) {
+    if (headerData.edges[1].node.frontmatter.logo === null) {
+      logo = headerData.edges[0].node
+    } else {
+      logo = headerData.edges[1].node
+    }
   }
   return (
     <div>
