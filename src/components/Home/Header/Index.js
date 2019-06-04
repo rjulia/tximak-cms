@@ -16,7 +16,7 @@ export const Header = props => {
   if (!props.data) {
     return null;
   }
-  const data = props.data.edges[0].node.frontmatter;
+  const data = props.data.frontmatter
   return <HeaderTemplate data={data} />;
 };
 

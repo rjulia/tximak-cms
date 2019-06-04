@@ -9,12 +9,14 @@ const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
 
   let logo
-  console.log(headerData)
+  let header
   if (headerData) {
     if (headerData.edges[0].node.frontmatter.logo === null) {
       logo = headerData.edges[1].node
+      header = headerData.edges[0].node
     } else {
       logo = headerData.edges[0].node
+      header = headerData.edges[1].node
     }
   }
   return (
@@ -26,7 +28,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
         <meta property="og:title" content={title} />
 
       </Helmet>
-      <Header data={headerData} />
+      <Header data={header} />
       <Navbar logo={logo} />
       <div>{children}</div>
     </div>

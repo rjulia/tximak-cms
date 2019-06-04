@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const BlogPostTemplate = ({
+export const ProductTemplate = ({
   content,
   contentComponent,
   description,
@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
+ProductTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -40,38 +40,38 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const Product = ({ data }) => {
+  const { markdownRemark: product } = data
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
+    <Layout headerData={data.headerData}>
+      <ProductTemplate
+        content={product.html}
         contentComponent={HTMLContent}
-        description={post.frontmatter.description}
+        description={product.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
+            <title>{`${product.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${post.frontmatter.description}`}
+              content={`${product.frontmatter.description}`}
             />
           </Helmet>
         }
 
-        title={post.frontmatter.title}
+        title={product.frontmatter.title}
       />
     </Layout>
   )
 }
 
-BlogPost.propTypes = {
+Product.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default Product
 
 export const pageQuery = graphql`
   query ProductByID($id: String!) {
@@ -79,11 +79,10 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        
         title
         description
-        
       }
     }
+    ...LayoutFragment
   }
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ProductsRoll extends React.Component {
@@ -30,7 +30,10 @@ class ProductsRoll extends React.Component {
               <div className="product__card--price">
                 <p>{product.frontmatter.price}</p>
               </div>
-              <button className="btn"> + Info</button>
+              <Link className="button" to={product.fields.slug}>
+                Keep Reading →
+              </Link>
+              {/* <Link className="btn"> + Info</Link> */}
             </div>
           </div>
         </div>
