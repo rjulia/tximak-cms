@@ -3,7 +3,6 @@ import './services.scss';
 
 const index = ({ tratement }) => {
 
-  console.log(tratement)
 
   return (
     <div className="container is-fluid services">

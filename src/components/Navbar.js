@@ -8,7 +8,6 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: '',
     }
-    console.log(props)
   }
   toggleHamburger = () => {
     // toggle the active boolean in the state

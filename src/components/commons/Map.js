@@ -5,7 +5,6 @@ import LocationIcon from "../../img/location.svg";
 
 class Map extends Component {
   render() {
-    console.log(this.props)
     if (!this.props.latitude || !this.props.longitude || !this.props.link) {
       return null;
     }
