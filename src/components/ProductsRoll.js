@@ -1,39 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-// import PreviewCompatibleImage from './PreviewCompatibleImage' 
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ProductsRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: product } = data.allMarkdownRemark;
     console.log(product);
-    return (
-      <div>
-        {product && product.map(({ node: post }) => (
+    return product && product.map(({ node: product }) => (
 
-          <div key={post} className="product__item">
-            <div className="product__card">
-              <div className="product__card--image">
-                <img src="/img/shampoo_16.9oz.jpg" alt="" />
+      <div key={product.id} className="product__item">
+        <div className="product__card">
+          <div className="product__card--image">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: product.frontmatter.image,
+                alt: `featured image thumbnail for product ${
+                  product.title
+                  }`,
+              }}
+            />
+          </div>
+          <div className="product__card--text">
+            <div>
+              <h4>{product.frontmatter.title}</h4>
+              <p>{product.excerpt}</p>
+            </div>
+            <div className="product__card--button">
+              <div className="product__card--price">
+                <p>{product.frontmatter.price}</p>
               </div>
-              <div className="product__card--text">
-                <div>
-                  <h4>Champu acondicinador cabello graso</h4>
-                  <p>Description del producto que puede tenr todas estas lineas</p>
-                </div>
-                <div className="product__card--button">
-                  <div className="product__card--price">
-                    <p> 55€</p>
-                  </div>
-                  <button className="btn"> + Info</button>
-                </div>
-              </div>
+              <button className="btn"> + Info</button>
             </div>
           </div>
-        ))}
+        </div>
       </div>
-    )
+    ))
   }
 }
 
@@ -50,10 +53,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
-        allMarkdownRemark(
-          sort: { order: DESC }
-          filter: { frontmatter: { templateKey: { eq: "product-page" } } }
-        ) {
+        allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "product-page" } } }) {
           edges {
             node {
               excerpt(pruneLength: 10)
