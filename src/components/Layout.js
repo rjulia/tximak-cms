@@ -8,6 +8,12 @@ import Navbar from "./Navbar";
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
   console.log(headerData)
+  let logo
+  if (headerData.edges[1].node.frontmatter.logo === null) {
+    logo = headerData.edges[0].node
+  } else {
+    logo = headerData.edges[1].node
+  }
   return (
     <div>
       <Helmet>
@@ -18,7 +24,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
 
       </Helmet>
       <Header data={headerData} />
-      <Navbar />
+      <Navbar logo={logo} />
       <div>{children}</div>
     </div>
   )
@@ -26,13 +32,20 @@ const TemplateWrapper = ({ headerData = null, children }) => {
 
 export const query = graphql`
   fragment LayoutFragment on Query {
-    headerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "header" } } }) {
+    headerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { in: ["header","home-page" ] } } }) {
       edges {
         node {
           id
           frontmatter {
             title
             telephone
+            logo { 
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

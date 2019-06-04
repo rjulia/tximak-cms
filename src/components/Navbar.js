@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
+import Logo from "./Home/Logo/Logo";
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -8,8 +8,8 @@ const Navbar = class extends React.Component {
       active: false,
       navBarActiveClass: '',
     }
+    console.log(props)
   }
-
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
@@ -31,6 +31,7 @@ const Navbar = class extends React.Component {
   }
 
   render() {
+
     return (
       <nav
         className="navbar is-transparent"
@@ -38,6 +39,9 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
+          <Link to="/" title="Logo">
+            <Logo logo={this.props.logo.frontmatter.logo} />
+          </Link>
           <div className="navbar-brand">
 
             {/* Hamburger menu */}

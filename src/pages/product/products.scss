@@ -1,0 +1,64 @@
+@import "../../styles/variables.sass";
+
+.products {
+  .products__contatiner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .product__item {
+      flex: 1 1 25%;
+      padding: 20px;
+
+      .product__card--image {
+        overflow: hidden;
+
+      }
+
+      .product__card--text {
+        display: flex;
+        flex-direction: row;
+
+        >div {
+          flex: 1 1 50%;
+
+          >p {
+            font-family: $mainFont;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+
+        h4 {
+          font-weight: 700;
+          font-family: $mainFont;
+          font-size: 20px;
+          color: $black;
+          line-height: 22px;
+          margin-bottom: 10px;
+        }
+
+      }
+
+      .product__card--button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+      }
+
+      .product__card--price {
+        flex: 1 1 100%;
+        justify-content: flex-end;
+        display: flex;
+
+        p {
+          font-size: 40px;
+          color: $secondary;
+          font-family: $mainFont;
+        }
+      }
+    }
+  }
+}
