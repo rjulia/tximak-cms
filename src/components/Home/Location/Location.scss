@@ -1,3 +1,13 @@
+@import "../../../styles/variables.sass";
+
+.localitation {
+  background-image: url('/img/image_footer.jpg');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-origin: content-box;
+  background-size: contain
+}
+
 .localitation__container {
   height: 100vh;
   display: flex;
@@ -5,12 +15,48 @@
   flex-wrap: wrap;
   align-content: flex-start;
 
+  .localitation__title {
+    flex: 1 100%;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+
+    h2 {
+      color: $primary;
+      font-size: 34px;
+      font-family: $secondaryFont;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0 100px;
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
+
+      &:before {
+        content: 'Contac us';
+        z-index: -1;
+        position: absolute;
+        font-size: 78px;
+        font-family: $mainFont;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        color: rgba($color: #000000, $alpha: .1);
+      }
+    }
+  }
+
   .localitation__text--container,
   .localitation__container--map {
     flex: 1 1 50%;
     height: auto;
     min-height: 80vh;
+    padding: 5rem;
   }
 
-
+  .localitation__text--container {
+    font-size: 20px;
+    line-height: 34px;
+  }
 }

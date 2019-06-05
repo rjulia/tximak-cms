@@ -7,11 +7,10 @@ const Location = ({ location }) => {
   const latitude = 43.2935862
   const longitude = -2.25313
   return (
-    <div className="container ">
-      <div className="localitation__container">
+    <div className="localitation">
+      <div className="container localitation__container">
         <div className="localitation__title">
-          <img src="" alt="" />
-
+          <h2>{location.name}</h2>
         </div>
         <div className="localitation__text--container">
           <p dangerouslySetInnerHTML={{ __html: location.body }}></p>
