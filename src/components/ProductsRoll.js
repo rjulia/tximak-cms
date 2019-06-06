@@ -31,7 +31,7 @@ class ProductsRoll extends React.Component {
                 <p>{product.frontmatter.price}</p>
               </div>
               <Link className="button" to={product.fields.slug}>
-                Keep Reading →
+                Mas info →
               </Link>
               {/* <Link className="btn"> + Info</Link> */}
             </div>
@@ -58,7 +58,7 @@ export default () => (
         allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "product-page" } } }) {
           edges {
             node {
-              excerpt(pruneLength: 10)
+              excerpt(pruneLength:50)
               id
               fields {
                 slug
