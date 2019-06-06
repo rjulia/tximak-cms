@@ -35,18 +35,18 @@ slideshow:
   firstpicture:
     heading: La vida no es perfecta pero tu pelo puede serlo
     image: /img/portada_01.jpg
-    imageAlt: chica con el pelo largo
+    imageAlt: corte de pelo moderno en zumaia
     subHeading: Tratamientos de alisado con queratina
   secondpicture:
-    heading: Eso es otro titulo
-    image: /img/46504444-beautiful-bride-with-stylish-make-up-in-white-dress.jpg
-    imageAlt: la novia sin novio
-    subHeading: uno mas cortito para el subtitulo
+    heading: 'Nada puede estropear tu dia, menos tu cabello o tu peluquero'
+    image: /img/portada_02.jpg
+    imageAlt: peinados para novias en zumaia
+    subHeading: Larga experiencia en peinados para bodas y eventos especiales
   thirdpicture:
-    heading: A ver si esto sale
-    image: /img/screenshot-2019-05-31-at-16.10.10.png
-    imageAlt: el guapo
-    subHeading: vamos a ver que hacemos
+    heading: Porque un hombre siempre merece estar guapo y a la ultima
+    image: /img/portada_03.jpg
+    imageAlt: Peluquería caballeros en Zumaia
+    subHeading: 'Profesional del cabello masculino, afeitados y tratamientos para barbas'
 ourteam:
   body: >-
     Un equipo de tres profesionales capacitado para realizar cualquier tipo de
