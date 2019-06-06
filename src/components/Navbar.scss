@@ -1,3 +1,5 @@
+@import "../styles/variables.sass";
+
 .navbar-brand {
   z-index: 1;
   display: block;
@@ -12,5 +14,27 @@
   .navbar-burger.is-active {
     background-color: #fff;
 
+  }
+}
+
+.navbar-menu {
+  padding-top: 20px;
+
+  .navbar-item {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $mobile) {
+    .navbar-item {
+      font-size: 20px;
+      border-right: 1px solid $primary;
+
+      &:last-child {
+        border-right: none;
+
+      }
+    }
   }
 }

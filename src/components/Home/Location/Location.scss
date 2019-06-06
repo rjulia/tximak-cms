@@ -48,12 +48,16 @@
       }
     }
 
-    @media (max-width: $mobile) {
-      .localitation__title {
-        height: 150px;
+    @media (min-width: $mobile) {
 
-        h2 {
-          padding: 0 100px;
+      height: 150px;
+
+      h2 {
+        padding: 0 100px;
+        font-size: 34px;
+
+        &:before {
+          font-size: 78px;
         }
       }
     }
