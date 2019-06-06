@@ -1,6 +1,6 @@
 ---
 templateKey: header
-title: Our Coffee
-telephone: '94300000'
+title: Tu peluquería de Zumaia
+telephone: 943 86 04 49
 ---
 
