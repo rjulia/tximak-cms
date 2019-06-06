@@ -49,10 +49,13 @@ slideshow:
     subHeading: vamos a ver que hacemos
 ourteam:
   body: >-
-    Un equipo de tres profesionales capacitado para satisfacer a todo tipo de
-    gente
-  image: /img/flavor_wheel.jpg
-  imageAlt: la cafeteria de olimpia
+    Un equipo de tres profesionales capacitado para realizar cualquier tipo de
+    trabajo  de peluquería , Con m'as de 40 años de experiencia,  Tximak siempre
+    se ha caracterizado por dar un servicio  de calidad, rapidez y tratamos el
+    cabello de nuestras clientes con los mejores productos adecuados a cada
+    cabello.
+  image: /img/iban-malo-9.jpg
+  imageAlt: antto extabe
   title: Nuestro Equipos
 ---
 
