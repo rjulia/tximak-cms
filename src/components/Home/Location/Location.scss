@@ -29,7 +29,7 @@
       font-weight: 700;
       text-transform: uppercase;
       position: relative;
-      padding: 0 100px;
+      padding: 0 auto;
       text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
 
       &:before {
@@ -45,6 +45,14 @@
         color: rgba($color: #000000, $alpha: .1);
       }
     }
+
+    @media (max-width: $mobile) {
+      .localitation__title {
+        h2 {
+          padding: 0 100px;
+        }
+      }
+    }
   }
 
   .localitation__text--container,
@@ -56,7 +64,51 @@
   }
 
   .localitation__text--container {
-    font-size: 20px;
-    line-height: 34px;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 15%;
+
+    b {
+      font-size: 22px;
+      color: $black;
+    }
+
+    a {
+      color: $primary;
+      font-size: 16px;
+    }
+
+    .icon_instagram,
+    .icon_facebook {
+      margin-top: 10px;
+      height: 50px;
+      width: 50px;
+      position: relative;
+      display: inline-block;
+      float: left;
+
+      svg {
+
+        fill: $primary;
+
+        #facebook {
+          width: 150px;
+          height: 150px;
+          transform: scale(4.5);
+        }
+      }
+    }
+
+    .icon_instagram {
+      padding: 0;
+      height: 46px;
+      width: 46px;
+
+      svg {
+        fill: $primary;
+        width: 90%;
+      }
+    }
   }
 }

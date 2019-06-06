@@ -1,11 +1,17 @@
+@import "../../../styles/variables.sass";
+
 .logo__container {
   position: absolute;
   z-index: 100;
-  margin-left: 50px;
+  margin-left: 10px;
   margin-top: 5px;
   width: 25%;
 
   img {
     width: 150px;
+  }
+
+  @media (min-width: $mobile) {
+    margin-left: 50px;
   }
 }

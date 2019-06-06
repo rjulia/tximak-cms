@@ -26,7 +26,7 @@ export default class Carousel extends React.Component {
   render() {
     const { slideshow } = this.props
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       fade: true,

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import useSiteMetadata from './SiteMetadata'
 import { graphql } from 'gatsby'
@@ -20,7 +20,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
     }
   }
   return (
-    <div>
+    <Fragment>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -31,7 +31,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
       <Header data={header} />
       <Navbar logo={logo} />
       <div>{children}</div>
-    </div>
+    </Fragment>
   )
 }
 

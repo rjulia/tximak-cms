@@ -22,7 +22,7 @@
       font-weight: 700;
       text-transform: uppercase;
       position: relative;
-      padding: 0 200px;
+      padding: 0 auto;
       text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
 
       &:before {
@@ -37,6 +37,14 @@
         transform: translate(-50%, -50%);
         color: rgba($color: #000000, $alpha: .1);
         text-shadow: initial;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      .team__title {
+        h2 {
+          padding: 0 100px;
+        }
       }
     }
   }

@@ -1,14 +1,14 @@
 @import "../../../styles/variables.sass";
 
 .slick-slider {
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 
   .caroulsel__container {
     overflow-y: hidden;
     position: relative;
 
     .full-width-image {
-      height: 100vh;
+      height: calc(100vh - 55px);
       background-position: right;
 
     }
@@ -16,8 +16,8 @@
 
   .slick-arrow {
     background-color: rgba($primary, 0.5);
-    width: 70px;
-    height: 80px;
+    width: 45px;
+    height: 50px;
     z-index: 10;
 
     &:hover {
@@ -43,8 +43,8 @@
       padding: 8px 5px 5px 0;
 
       svg {
-        height: 70px;
-        width: 60px;
+        height: 35px;
+        width: 35px;
         fill: $secondary;
       }
 
@@ -66,9 +66,10 @@
 
   .caroulsel__text {
     position: absolute;
-    bottom: 10%;
-    width: 85vw;
-    background: rgba(#fff, 0.9);
+    bottom: 40px;
+    left: 40px;
+    width: calc(100vw - 80px);
+    background: rgba(#000, 0.4);
     padding: 20px;
 
     h1 {
@@ -107,5 +108,26 @@
       }
 
     }
+
+    .slick-arrow {
+
+      width: 70px;
+      height: 80px;
+
+      .icon-arrow {
+
+        padding: 8px 5px 5px 0;
+
+        svg {
+          height: 70px;
+          width: 60px;
+        }
+
+        &.icon-arrow__next {
+          padding-top: 5px;
+        }
+      }
+    }
   }
+
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import './Location.scss';
-import Map from '../../commons/Map';
-
+import './Location.scss'
+import Map from '../../commons/Map'
+import { FacebookIcon, InstagramIcon } from "../../../Assets/index";
 
 const Location = ({ location }) => {
   const latitude = 43.2935862
@@ -15,6 +15,12 @@ const Location = ({ location }) => {
         <div className="localitation__text--container">
           <p dangerouslySetInnerHTML={{ __html: location.body }}></p>
 
+          <a target="_blank" rel="noopener noreferrer" href={"https://www.facebook.com/Tximak-peluqueria-205991723675399/"}>
+            <FacebookIcon className={'icon_facebook'} />
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href={"https://www.instagram.com/"}>
+            <InstagramIcon className={'icon_instagram'} />
+          </a>
         </div>
         <div className="localitation__container--map">
           <Map
