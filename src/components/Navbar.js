@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Logo from "./Home/Logo/Logo";
+import './Navbar.scss'
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -38,10 +39,10 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
-          <Link to="/" title="Logo">
+          <Link to="/" title="Logo" className="link__logo">
             <Logo logo={this.props.logo.frontmatter.logo} />
           </Link>
-          <div className="navbar-brand">
+          <div className={`navbar-brand ${this.state.navBarActiveClass}`}>
 
             {/* Hamburger menu */}
             <div
@@ -59,9 +60,11 @@ const Navbar = class extends React.Component {
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
             <div className="navbar-end  has-text-centered">
-
+              <Link className="navbar-item" to="/">
+                HOME
+              </Link>
               <Link className="navbar-item" to="/product">
-                Products
+                PRODUCTS
               </Link>
               {/* <Link className="navbar-item" to="/blog">
                 Blog

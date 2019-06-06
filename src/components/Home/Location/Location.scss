@@ -9,7 +9,7 @@
 }
 
 .localitation__container {
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -24,30 +24,34 @@
 
     h2 {
       color: $primary;
-      font-size: 34px;
+      font-size: 26px;
       font-family: $secondaryFont;
       font-weight: 700;
+      text-align: center;
       text-transform: uppercase;
       position: relative;
-      padding: 0 auto;
+      padding: 0 50px;
+      width: 100%;
       text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
 
       &:before {
-        content: 'Contac us';
+        content: 'Contacta ahora';
         z-index: -1;
         position: absolute;
-        font-size: 78px;
+        font-size: 40px;
         font-family: $mainFont;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-        color: rgba($color: #000000, $alpha: .1);
+        color: rgba($color: #ccc, $alpha: .3);
       }
     }
 
     @media (max-width: $mobile) {
       .localitation__title {
+        height: 150px;
+
         h2 {
           padding: 0 100px;
         }
@@ -59,15 +63,15 @@
   .localitation__container--map {
     flex: 1 1 50%;
     height: auto;
-    min-height: 80vh;
-    padding: 5rem;
+    min-height: 50vh;
+    padding: 10px 20px;
   }
 
   .localitation__text--container {
     align-items: flex-start;
     font-size: 16px;
-    line-height: 32px;
-    padding-left: 15%;
+    line-height: 25px;
+
 
     b {
       font-size: 22px;
@@ -110,5 +114,22 @@
         width: 90%;
       }
     }
+  }
+
+  @media (min-width: $mobile) {
+    height: 100vh;
+
+    .localitation__text--container,
+    .localitation__container--map {
+      flex: 1 1 50%;
+      height: 200px;
+      min-height: 60vh;
+      padding: 2rem 0;
+    }
+
+    .localitation__text--container {
+      padding-left: 20px;
+    }
+
   }
 }

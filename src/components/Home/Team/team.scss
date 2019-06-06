@@ -1,7 +1,8 @@
 @import "../../../styles/variables.sass";
 
 .team__container {
-  height: 100vh;
+  min-height: 600px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,41 +13,37 @@
     justify-content: center;
     display: flex;
     margin: 20px 0;
-    height: 150px;
+    height: 100px;
     align-items: center;
 
     h2 {
       color: $primary;
-      font-size: 34px;
+      font-size: 26px;
       font-family: $secondaryFont;
       font-weight: 700;
+      text-align: center;
       text-transform: uppercase;
       position: relative;
-      padding: 0 auto;
+      padding: 0 50px;
+      width: 100%;
       text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
 
       &:before {
         content: 'Nuestro equipo';
         z-index: -1;
         position: absolute;
-        font-size: 78px;
+        font-size: 40px;
         font-family: $mainFont;
         top: 50%;
         left: 50%;
         margin-right: -50%;
         transform: translate(-50%, -50%);
-        color: rgba($color: #000000, $alpha: .1);
+        color: rgba($color: #ccc, $alpha: .3);
         text-shadow: initial;
       }
     }
 
-    @media (max-width: $mobile) {
-      .team__title {
-        h2 {
-          padding: 0 100px;
-        }
-      }
-    }
+
   }
 
   .team__container--image {
@@ -58,10 +55,31 @@
   }
 
   .team__text--container {
-    flex: 1 1 50%;
-    padding: 100px;
+    flex: 1 1 100%;
+    padding: 40px 20px;
     font-family: $mainFont;
-    font-size: 24px;
+    font-size: $textMobile;
     text-align: center;
+  }
+
+  @media (min-width: $mobile) {
+    .team__title {
+      height: 150px;
+
+      h2 {
+        padding: 0 100px;
+        font-size: 34px;
+
+        &:before {
+          font-size: 78px;
+        }
+      }
+    }
+
+    .team__text--container {
+      flex: 1 1 50%;
+      padding: 100px;
+      font-size: $textDesktop;
+    }
   }
 }

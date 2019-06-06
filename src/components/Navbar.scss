@@ -1,0 +1,16 @@
+.navbar-brand {
+  z-index: 1;
+  display: block;
+  position: relative;
+  height: 3.25rem;
+
+  &.is-active {
+    background-color: #fff;
+
+  }
+
+  .navbar-burger.is-active {
+    background-color: #fff;
+
+  }
+}
