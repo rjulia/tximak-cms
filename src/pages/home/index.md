@@ -34,7 +34,7 @@ tratement:
 slideshow:
   firstpicture:
     heading: La vida no es perfecta pero tu pelo puede serlo
-    image: /img/screenshot-2019-05-31-at-16.10.10.png
+    image: /img/portada_01.jpg
     imageAlt: chica con el pelo largo
     subHeading: Tratamientos de alisado con queratina
   secondpicture:
@@ -44,7 +44,7 @@ slideshow:
     subHeading: uno mas cortito para el subtitulo
   thirdpicture:
     heading: A ver si esto sale
-    image: /img/la-ruta-del-flych-de-zumaia.jpg
+    image: /img/screenshot-2019-05-31-at-16.10.10.png
     imageAlt: el guapo
     subHeading: vamos a ver que hacemos
 ourteam:
