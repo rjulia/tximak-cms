@@ -46,6 +46,9 @@ export const ProductTemplate = ({
           </div>
           <p className="product__description">{description}</p>
           <PostContent content={content} />
+        </div>
+        <div className="product__conditions">
+          <h3>Condiciones: </h3>
           <p>{shipping}</p>
 
         </div>

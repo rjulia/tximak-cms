@@ -15,7 +15,7 @@
       flex: 1 1 100%;
       text-align: center;
       margin: 20px 0;
-      padding: 20px 0;
+      padding: 20px;
       border-bottom: 1px solid rgba($color: $black, $alpha: .3);
       border-top: 1px solid rgba($color: $black, $alpha: .3);
 
@@ -27,10 +27,12 @@
 
     .product__image {
       flex: 1 1 50%;
+      padding: 20px;
     }
 
     .product__content {
       flex: 1 1 50%;
+      padding: 20px;
 
       .product__brand {
         font-size: 20px;
@@ -92,6 +94,22 @@
           text-decoration: line-through;
           color: $primary
         }
+      }
+    }
+
+    .product__conditions {
+      margin-top: 20px;
+      padding: 20px;
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        line-height: 36px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba($color: $black, $alpha: .3);
+
+
       }
     }
   }
