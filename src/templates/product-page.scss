@@ -2,7 +2,7 @@
 
 .product {
   padding-top: 250px;
-  margin-top: 150px;
+  margin-top: 50px;
 
   .product__container {
     max-width: 1024px;
@@ -26,13 +26,13 @@
     }
 
     .product__image {
-      flex: 1 1 50%;
-      padding: 20px;
+      flex: 1 1 100%;
+
     }
 
     .product__content {
-      flex: 1 1 50%;
-      padding: 20px;
+      flex: 1 1 100%;
+
 
       .product__brand {
         font-size: 20px;
@@ -99,7 +99,6 @@
 
     .product__conditions {
       margin-top: 20px;
-      padding: 20px;
 
       h3 {
         font-size: 20px;
@@ -112,6 +111,22 @@
 
       }
     }
+  }
+
+  @media (min-width: $mobile) {
+    margin-top: 150px;
+
+    .product__content,
+    .product__image {
+      flex: 1 1 50%;
+      padding: 20px;
+    }
+
+    .product__conditions {
+      padding: 20px;
+
+    }
+
   }
 
 }
