@@ -6,7 +6,7 @@ description: Champu ideal para cabellos secos y castigado por el sol
 featuredpost: true
 image: /img/41nbvusjq3l._sx425_.jpg
 price: 66 €
-discount: true
+discount: false
 price_discount: 48 €
 shipping: >-
   No esta incluidos  los gastos de envíos , Podrás recogerlo en nuestro

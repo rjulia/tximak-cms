@@ -1,7 +1,7 @@
 @import '../styles/variables.sass';
 
 .product {
-  padding-top: 250px;
+  padding-top: 50px;
   margin-top: 50px;
 
   .product__container {
@@ -43,16 +43,24 @@
       }
 
       .product__price {
-        font-size: 26px;
+        font-size: 45px;
         line-height: 30px;
         font-family: $secondaryFont;
         color: $black;
         margin-bottom: 10px;
 
-        .product__discount {
-          display: none;
-        }
 
+      }
+
+      .product__discount {
+        display: none;
+
+        .product__discount--text {
+          display: block;
+          position: relative;
+          font-size: 14px;
+          color: #da3402
+        }
       }
 
       .product__description {
@@ -92,7 +100,8 @@
 
         .product__price {
           text-decoration: line-through;
-          color: $primary
+          color: $primary;
+          font-size: 26px;
         }
       }
     }
@@ -115,6 +124,7 @@
 
   @media (min-width: $mobile) {
     margin-top: 150px;
+    padding-top: 250px;
 
     .product__content,
     .product__image {

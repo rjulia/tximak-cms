@@ -39,6 +39,7 @@ export const ProductTemplate = ({
           <p className="product__brand">Marca: L'oreal</p>
           <p className="product__price">{price}</p>
           <p className="product__discount">
+            <span className="product__discount--text">OFERTA:</span>
             {price_discount}
           </p>
           <div className="product__button">
