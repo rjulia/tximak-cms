@@ -122,19 +122,21 @@
     }
   }
 
-  @media (min-width: $mobile) {
+  @media (min-width: $tablet) {
     margin-top: 150px;
-    padding-top: 250px;
 
-    .product__content,
-    .product__image {
-      flex: 1 1 50%;
-      padding: 20px;
-    }
+    .product__container {
 
-    .product__conditions {
-      padding: 20px;
+      .product__content,
+      .product__image {
+        flex: 1 1 50%;
+        padding: 20px;
+      }
 
+      .product__conditions {
+        padding: 20px;
+
+      }
     }
 
   }
