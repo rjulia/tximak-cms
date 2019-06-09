@@ -9,9 +9,9 @@ class ProductsRoll extends React.Component {
     const { edges: product } = data.allMarkdownRemark;
     return product && product.map(({ node: product }) => (
 
-      <div key={product.id} className="product__item">
-        <div className="product__card">
-          <div className="product__card--image">
+      <div key={product.id} className="services__item">
+        <div className="services__card">
+          <div className="services__card--image">
             <PreviewCompatibleImage
               imageInfo={{
                 image: product.frontmatter.image,
@@ -21,13 +21,13 @@ class ProductsRoll extends React.Component {
               }}
             />
           </div>
-          <div className="product__card--text">
+          <div className="services__card--text">
             <div>
               <h4>{product.frontmatter.title}</h4>
               <p>{product.excerpt}</p>
             </div>
-            <div className="product__card--button">
-              <div className="product__card--price">
+            <div className="services__card--button">
+              <div className="services__card--price">
                 <p>{product.frontmatter.price}</p>
               </div>
               <Link className="button" to={product.fields.slug}>
@@ -54,8 +54,8 @@ ProductsRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProductRollQuery {
-        allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "product-page" } } }) {
+      query ServiceRollQuery {
+        allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "servicies" } } }) {
           edges {
             node {
               excerpt(pruneLength:50)

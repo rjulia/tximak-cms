@@ -17,6 +17,20 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "header"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Numero de telefono", name: "telephone", widget: "string"}
+  - name: "services"
+    label: "Services"
+    folder: "src/pages/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Precio", name: "price", widget: "string"}
+      - {label: "Descuento", name: "discount", widget: "boolean", required: false}
+      - {label: "Precio Descuento", name: "price_discount", widget: "string", required: false}
+      - {label: "Featured Image", name: "featuredimage", widget: image}
+
   # - name: "blog"
   #   label: "Blog"
   #   folder: "src/pages/blog"
