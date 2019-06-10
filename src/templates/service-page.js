@@ -72,7 +72,7 @@ const Service = ({ data }) => {
         content={service.html}
         contentComponent={HTMLContent}
         description={service.frontmatter.description}
-        image={service.frontmatter.image}
+        image={service.frontmatter.featuredimage}
         price={service.frontmatter.price}
         price_discount={service.frontmatter.price_discount}
         discount={service.frontmatter.discount}
@@ -112,7 +112,7 @@ export const pageQuery = graphql`
         price
         discount
         price_discount
-        image{ 
+        featuredimage{ 
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid

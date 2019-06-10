@@ -1,0 +1,37 @@
+@import "../../styles/variables.sass";
+
+.services {
+  .services__contatiner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .services__item {
+      width: 100%;
+
+    }
+
+    .services__card {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .services__card--text,
+    .services__card--image {
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    .services__contatiner {
+      .services__item {
+        width: 50%;
+
+      }
+    }
+  }
+}

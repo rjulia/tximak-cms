@@ -15,7 +15,7 @@ class ServicesRoll extends React.Component {
           <div className="services__card--image">
             <PreviewCompatibleImage
               imageInfo={{
-                image: service.frontmatter.image,
+                image: service.frontmatter.featuredimage,
                 alt: `featured image thumbnail for service ${
                   service.title
                   }`,
@@ -23,6 +23,7 @@ class ServicesRoll extends React.Component {
             />
           </div>
           <div className="services__card--text">
+
             <div>
               <h4>{service.frontmatter.title}</h4>
               <p>{service.excerpt}</p>
@@ -67,7 +68,7 @@ export default () => (
               frontmatter {
                 description
                 title
-                image {
+                featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 200, quality: 100) {
                       ...GatsbyImageSharpFluid

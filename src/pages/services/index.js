@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from '../../components/Layout'
 import ServicesRoll from '../../components/ServicesRoll'
-//import './products.scss';
+import './services.scss';
 
 const ServicesIndexPage = ({ data }) => {
 
@@ -14,7 +14,7 @@ const ServicesIndexPage = ({ data }) => {
       <div
         className="full-width-image-container margin-top-0"
         style={{
-          backgroundImage: `url('/img/icon_email.jpg')`,
+          backgroundImage: `url('/img/hero_services.jpg')`,
         }}
       >
         <h1
