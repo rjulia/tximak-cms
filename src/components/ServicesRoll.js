@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import { graphql, StaticQuery } from 'gatsby'
+// import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ServicesRoll extends React.Component {
   render() {
     const { data } = this.props;
     console.log(data)
+    return null
     //const { edges: product } = data.allMarkdownRemark;
     //return product && product.map(({ node: product }) => (
 

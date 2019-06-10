@@ -28,8 +28,8 @@ const ServicesIndexPage = ({ data }) => {
           SERVICIOS
           </h1>
       </div>
-      <section className="section products">
-        <div className="container products__contatiner">
+      <section className="section services">
+        <div className="container services__contatiner">
 
           <ServicesRoll />
 
