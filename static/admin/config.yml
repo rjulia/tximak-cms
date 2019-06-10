@@ -21,7 +21,7 @@ collections:
     label: "Services"
     folder: "src/pages/services"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service-page"}
       - {label: "Title", name: "title", widget: "string"}
