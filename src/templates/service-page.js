@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-//import "./services-page.scss";
+import "./service-page.scss";
 export const ServiceTemplate = ({
   content,
   contentComponent,
@@ -15,7 +15,6 @@ export const ServiceTemplate = ({
   price,
   price_discount,
   discount,
-  shipping
 }) => {
 
   const PostContent = contentComponent || Content;
@@ -23,35 +22,30 @@ export const ServiceTemplate = ({
   const classPrice = discount ? "hasDiscount" : "";
 
   return (
-    <section className="section services">
+    <section className="section service">
       {helmet || ''}
-      <div className="container product__container">
-        <div className="product__title">
+      <div className="container service__container">
+        <div className="service__title">
           <h1 className="title">
             {title}
           </h1>
         </div>
 
-        <div className="product__image">
+        <div className="service__image">
           <img src={imageSrc} alt="" />
         </div>
-        <div className={`product__content ${classPrice}`}>
-          <p className="product__brand">Marca: L'oreal</p>
-          <p className="product__price">{price}</p>
-          <p className="product__discount">
-            <span className="product__discount--text">OFERTA:</span>
+        <div className={`service__content ${classPrice}`}>
+          <p className="service__brand">Marca: L'oreal</p>
+          <p className="service__price">{price}</p>
+          <p className="service__discount">
+            <span className="service__discount--text">OFERTA:</span>
             {price_discount}
           </p>
-          <div className="product__button">
+          <div className="service__button">
             <button className="btn">Solicitar</button>
           </div>
-          <p className="product__description">{description}</p>
+          <p className="service__description">{description}</p>
           <PostContent content={content} />
-        </div>
-        <div className="product__conditions">
-          <h3>Condiciones: </h3>
-          <p>{shipping}</p>
-
         </div>
       </div>
 
@@ -68,48 +62,46 @@ ServiceTemplate.propTypes = {
   price: PropTypes.string,
   price_discount: PropTypes.string,
   discount: PropTypes.bool,
-  shipping: PropTypes.string,
 }
 
-const services = ({ data }) => {
-  const { markdownRemark: services } = data
+const Service = ({ data }) => {
+  const { markdownRemark: service } = data
   return (
     <Layout headerData={data.headerData}>
       <ServiceTemplate
-        content={services.html}
+        content={service.html}
         contentComponent={HTMLContent}
-        description={services.frontmatter.description}
-        image={services.frontmatter.image}
-        price={services.frontmatter.price}
-        price_discount={services.frontmatter.price_discount}
-        discount={services.frontmatter.discount}
-        shipping={services.frontmatter.shipping}
+        description={service.frontmatter.description}
+        image={service.frontmatter.image}
+        price={service.frontmatter.price}
+        price_discount={service.frontmatter.price_discount}
+        discount={service.frontmatter.discount}
         helmet={
           <Helmet titleTemplate="%s | Blog">
-            <title>{`${services.frontmatter.title}`}</title>
+            <title>{`${service.frontmatter.title}`}</title>
             <meta
               name="description"
-              content={`${services.frontmatter.description}`}
+              content={`${service.frontmatter.description}`}
             />
           </Helmet>
         }
 
-        title={services.frontmatter.title}
+        title={service.frontmatter.title}
       />
     </Layout>
   )
 }
 
-services.propTypes = {
+Service.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default services
+export default Service
 
 export const pageQuery = graphql`
-  query servicesByID($id: String!) {
+  query ServiceByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -120,7 +112,6 @@ export const pageQuery = graphql`
         price
         discount
         price_discount
-        shipping
         image{ 
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
