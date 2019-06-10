@@ -1,6 +1,13 @@
 @import "../../styles/variables.sass";
 
 .services {
+  margin-top: 70px;
+
+  &.full-width-image-container {
+    background-position: top;
+
+  }
+
   .services__contatiner {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +16,7 @@
     .services__item {
       width: 100%;
 
+
     }
 
     .services__card {
@@ -16,12 +24,41 @@
       flex-direction: row;
     }
 
-    .services__card--text,
+
     .services__card--image {
       width: 50%;
+      max-height: 250px;
+      overflow: hidden;
 
       img {
         width: 100%;
+      }
+    }
+
+    .services__card--text {
+      width: 50%;
+      padding: 0 20px;
+
+      h2 {
+        font-weight: 700;
+        font-family: $mainFont;
+        font-size: 18px;
+        color: $black;
+        line-height: 22px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .services__card--price {
+        flex: 1 1 100%;
+        justify-content: flex-start;
+        display: flex;
+
+        p {
+          font-size: 35px;
+          color: $secondary;
+          font-family: $mainFont;
+        }
       }
     }
   }

@@ -12,7 +12,7 @@ const ProductIndexPage = ({ data }) => {
 
     <Layout headerData={data.headerData}>
       <div
-        className="full-width-image-container margin-top-0 products"
+        className="full-width-image-container products"
         style={{
           backgroundImage: `url('/img/icon_email.jpg')`,
         }}

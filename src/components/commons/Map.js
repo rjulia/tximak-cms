@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
-import LocationIcon from "../../img/location.svg";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker, maps } from "react-google-maps";
+import LocationIcon from "../../img/icon-map.svg";
 
 class Map extends Component {
   render() {
@@ -14,9 +14,15 @@ class Map extends Component {
         defaultZoom={16}
         defaultCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
       >
+        {console.log(Marker.icon)}
         <Marker
           position={{ lat: this.props.latitude, lng: this.props.longitude }}
-          icon={{ url: LocationIcon }}
+          icon={{
+            url: LocationIcon,
+            scaledSize: { height: 60, width: 60 },
+          }}
+          class="hello"
+          options={{ "className": "icon" }}
           onClick={() => window.open(this.props.link)}
         />
       </GoogleMap>

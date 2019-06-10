@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery, Link } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ServicesRoll extends React.Component {
@@ -25,18 +25,15 @@ class ServicesRoll extends React.Component {
           <div className="services__card--text">
 
             <div>
-              <h4>{service.frontmatter.title}</h4>
-              <p>{service.excerpt}</p>
+              <h2>{service.frontmatter.title}</h2>
+              <p>{service.frontmatter.description}</p>
             </div>
-            <div className="services__card--button">
-              <div className="services__card--price">
-                <p>{service.frontmatter.price}</p>
-              </div>
-              <Link className="button" to={service.fields.slug}>
-                Mas info →
-            </Link>
-              {/* <Link className="btn"> + Info</Link> */}
+
+            <div className="services__card--price">
+              <p>{service.frontmatter.price} €</p>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -66,8 +63,11 @@ export default () => (
                 slug
               }
               frontmatter {
-                description
                 title
+                description
+                price
+                discount
+                price_discount
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 200, quality: 100) {

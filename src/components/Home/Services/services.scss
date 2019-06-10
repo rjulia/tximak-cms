@@ -7,6 +7,29 @@
   padding: 0;
   background-color: rgba($color: #FCE2C3, $alpha: .2);
 
+  .btn {
+    background-color: $primary;
+    box-shadow: initial;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $primary-invert;
+
+      a {
+        color: $primary;
+      }
+
+    }
+  }
+
   .columns {
     margin-left: 0;
     margin-right: 0;

@@ -12,9 +12,9 @@ const ServicesIndexPage = ({ data }) => {
 
     <Layout headerData={data.headerData}>
       <div
-        className="full-width-image-container margin-top-0"
+        className="full-width-image-container services"
         style={{
-          backgroundImage: `url('/img/hero_services.jpg')`,
+          backgroundImage: `url('/img/cebecera_servicio_c.jpg')`,
         }}
       >
         <h1
