@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 title: Meet other JavaScript Developers in Wakanda
-logo: /img/logo.png
+logo: /img/logo_h.png
 location:
   body: "Etxezarreta Kalea, 21 \PZUMAIA (Gipuzkoa) \P<br>\n\n<a href=\"mailto:etxabeantto@hotmail.com\P\P \">etxabeantto@hotmail.com\P\P </a><br>\n\nPida cita al telefono:\P <br><b>943 86 04 49</b> <br>\n\n\P\PHorario  de atención al público:\P <br>\n\nLunes a Jueves:\PMañana: <br><b>  9:00 a 13:00 \PTardes: 3:30 a 20:00</b>   <br>\n\n\P\PViernes:\PIninterrumpido: <br><b>9:00 a 20:00</b> \P\P <br>\n\nSábado: \PIninterrumpido: <br><b>9:00 a 16:00</b> <br>\n\n\P\PSíguenos  en: <br>"
   mapsLink: 'https://goo.gl/maps/uXdxV8KUuR4AgpbV8'
