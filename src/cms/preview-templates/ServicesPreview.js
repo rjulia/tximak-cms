@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ServiceTemplate } from '../../templates/services-pages'
+import { ServiceTemplate } from '../../templates/service-page'
 
 const ServicesPreview = ({ entry }) => (
   <ServiceTemplate
