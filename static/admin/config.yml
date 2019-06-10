@@ -23,7 +23,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "services"}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Precio", name: "price", widget: "string"}

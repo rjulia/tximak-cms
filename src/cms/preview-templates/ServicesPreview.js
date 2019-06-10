@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-//import { ProductTemplate } from '../../templates/product-page'
+import { ServiceTemplate } from '../../templates/services-pages'
 
 const ServicesPreview = ({ entry }) => (
-  <ProductTemplate
+  <ServiceTemplate
     title={entry.getIn(['data', 'title'])}
     description={entry.getIn(['data', 'description'])}
     price={entry.getIn(['data', 'price'])}
