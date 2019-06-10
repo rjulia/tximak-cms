@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker, maps } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
 import LocationIcon from "../../img/icon-map.svg";
 
 class Map extends Component {
