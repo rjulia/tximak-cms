@@ -16,7 +16,6 @@ export const ServiceTemplate = forwardRef(({
   price_discount,
   discount,
 }, ref) => {
-  console.log(image)
   const PostContent = contentComponent || Content;
   const imageSrc = image && !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
@@ -109,7 +108,7 @@ export const pageQuery = graphql`
         price
         discount
         price_discount
-        image{ 
+        image { 
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
