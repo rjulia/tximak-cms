@@ -6,7 +6,7 @@ description: >-
   en buen estado y rizo deseado
 price: '--'
 price_discount: '--'
-featuredimage: >-
+image: >-
   /img/53032297-hermosa-chica-con-el-pelo-largo-y-ondulado-modelo-morena-con-el-peinado-rizado.jpg
 ---
 

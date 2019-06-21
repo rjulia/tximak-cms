@@ -32,7 +32,7 @@ export const ServiceTemplate = forwardRef(({
         </div>
 
         <div className="service__image">
-          <img src={imageSrc} alt="{title}" />
+          <img src={imageSrc} alt={title} />
         </div>
         <div className={`service__content ${classPrice}`}>
           <p className="service__brand">Marca: L'oreal</p>
@@ -54,8 +54,6 @@ export const ServiceTemplate = forwardRef(({
 })
 
 ServiceTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -69,12 +67,10 @@ const Service = ({ data }) => {
   console.log(service)
   return (
     <Layout headerData={data.headerData}>
-
       <ServiceTemplate
-        content={service.html}
-        contentComponent={HTMLContent}
+        title={service.frontmatter.title}
         description={service.frontmatter.description}
-        image={service.frontmatter.featuredimage}
+        image={service.frontmatter.image}
         price={service.frontmatter.price}
         price_discount={service.frontmatter.price_discount}
         discount={service.frontmatter.discount}
@@ -88,7 +84,6 @@ const Service = ({ data }) => {
           </Helmet>
         }
 
-        title={service.frontmatter.title}
       />
     </Layout>
   )
@@ -114,7 +109,7 @@ export const pageQuery = graphql`
         price
         discount
         price_discount
-        featuredimage{ 
+        image{ 
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
