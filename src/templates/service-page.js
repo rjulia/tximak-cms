@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import "./service-page.scss";
-export const ServiceTemplate = ({
+export const ServiceTemplate = forwardRef(({
   content,
   contentComponent,
   description,
@@ -15,14 +15,14 @@ export const ServiceTemplate = ({
   price,
   price_discount,
   discount,
-}) => {
-
+}, ref) => {
+  console.log(image)
   const PostContent = contentComponent || Content;
-  const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
+  const imageSrc = image && !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
 
   return (
-    <section className="section service">
+    <section ref={ref} className="section service">
       {helmet || ''}
       <div className="container service__container">
         <div className="service__title">
@@ -32,7 +32,7 @@ export const ServiceTemplate = ({
         </div>
 
         <div className="service__image">
-          <img src={imageSrc} alt="" />
+          <img src={imageSrc} alt="{title}" />
         </div>
         <div className={`service__content ${classPrice}`}>
           <p className="service__brand">Marca: L'oreal</p>
@@ -51,7 +51,7 @@ export const ServiceTemplate = ({
 
     </section>
   )
-}
+})
 
 ServiceTemplate.propTypes = {
   content: PropTypes.node.isRequired,
@@ -66,8 +66,10 @@ ServiceTemplate.propTypes = {
 
 const Service = ({ data }) => {
   const { markdownRemark: service } = data
+  console.log(service)
   return (
     <Layout headerData={data.headerData}>
+
       <ServiceTemplate
         content={service.html}
         contentComponent={HTMLContent}

@@ -25,11 +25,11 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "service-page"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Precio", name: "price", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Precio", name: "price", widget: "string", required: false}
       - {label: "Descuento", name: "discount", widget: "boolean", required: false}
       - {label: "Precio Descuento", name: "price_discount", widget: "string", required: false}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
+      - {label: "Featured Image", name: "featuredimage", widget: image, required: false}
   - name: "product"
     label: "Productos"
     folder: "src/pages/product"
