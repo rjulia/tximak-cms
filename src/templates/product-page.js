@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import "./product-page.scss";
+import ContactForm from "../components/ContactForm";
+
 export const ProductTemplate = ({
   content,
   contentComponent,
@@ -17,11 +19,11 @@ export const ProductTemplate = ({
   discount,
   shipping
 }) => {
-
+  const [open, setOpen] = useState(false);
   const PostContent = contentComponent || Content;
   const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
-
+  console.log(open)
   return (
     <section className="section product">
       {helmet || ''}
@@ -43,7 +45,7 @@ export const ProductTemplate = ({
             {price_discount}
           </p>
           <div className="product__button">
-            <button className="btn">Solicitar</button>
+            <button className="btn" onClick={() => setOpen(true)}>Solicitar</button>
           </div>
           <p className="product__description">{description}</p>
           <PostContent content={content} />
@@ -54,7 +56,7 @@ export const ProductTemplate = ({
 
         </div>
       </div>
-
+      <ContactForm />
     </section>
   )
 }

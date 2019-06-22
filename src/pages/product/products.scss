@@ -19,7 +19,8 @@
       .product__card--image {
         overflow: hidden;
         margin-bottom: 10px;
-
+        max-height: 400px;
+        overflow: hidden;
       }
 
       .product__card--text {
