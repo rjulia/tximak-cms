@@ -7,9 +7,9 @@ description: >-
   cabellos coloreados para prolongar su intensidad y aportar brillo
 featuredpost: true
 image: /img/a-ox_vitamino_color_shampoo_1500_ml.jpg
-price: 68 €
+price: '68'
 discount: true
-price_discount: 48 €
+price_discount: '48'
 shipping: >-
   No esta incluidos  los gastos de envíos , Podrás recogerlo en nuestro
   establecimiento en Horario comercial de martes a sábado  ambos inclusive
