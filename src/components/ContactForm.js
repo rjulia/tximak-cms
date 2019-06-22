@@ -9,7 +9,15 @@ const encode = (data) => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", message: "" };
+    this.state = {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+      price: props.price * 1,
+      quantity: '1',
+      product: props.product
+    };
   }
 
   /* Here’s the juicy bit for posting the form submission */
@@ -29,26 +37,50 @@ class ContactForm extends React.Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message } = this.state;
+    const { name, email, message, product, phone, quantity, price } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <p>
+        <p className="control">
           <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
+            Nombre: <input className="input" type="text" name="name" value={name} onChange={this.handleChange} />
+          </label>
+        </p>
+        <p className="control">
+          <label>
+            Email: <input className="input" type="email" name="email" value={email} onChange={this.handleChange} />
+          </label>
+        </p>
+        <p className="control">
+          <label>
+            Telefono: <input className="input" type="text" name="phone" value={phone} onChange={this.handleChange} />
+          </label>
+        </p>
+
+
+        <div className="field is-grouped">
+          <p className="control">
+
+            <label>
+              Product: <input className="input" type="text" name="product" value={product} onChange={this.handleChange} />
+            </label>
+          </p>
+          <p className="control">
+            <label>
+              Cantidad: <input className="input" type="text" name="quantity" value={quantity} onChange={this.handleChange} />
+            </label>
+
+          </p>
+        </div>
+        <p className="control">
+          Total del precio es: {price}
+        </p>
+        <p className="control">
+          <label>
+            Message: <textarea className="input" name="message" value={message} onChange={this.handleChange} />
           </label>
         </p>
         <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
+          <button className="btn" type="submit">Send</button>
         </p>
       </form>
     );

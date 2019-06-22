@@ -1,6 +1,7 @@
 @import "~bulma/sass/utilities/initial-variables"
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+@import "~bulma"
 @import "./variables.sass"
 // Config vars
 
@@ -127,9 +128,49 @@ $menu-label-color: $white-ter
 .blog-list-item .featured-thumbnail
   flex-basis: 35%
   margin: 0 1.5em 0 0
-
-
-@import "~bulma"
+//pop-up forms
+.conact__form
+  z-index: $modal
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(#000, 0.5)
+  display: flex
+  justify-content: center
+  align-content: center
+  align-items: center
+  .contact__form--container
+    background-color: $white
+    min-height: 400px
+    min-width: 340px
+    padding: 50px
+    .control
+      padding-bottom: 5px
+      margin-bottom: 10px
+    .conact__form--header
+      display: flex
+      flex-direction: row
+      margin-bottom: 20px
+      h2
+        padding-right: 50px
+        font-size: 24px
+        font-weight: 700
+      .btn
+        background-color: $secondary
+        border-color: $secondary
+        color: $white
+        box-shadow: none
+        max-height: 44px
+    .contact__form--body
+      .btn
+        margin-top: 20px
+        background-color: $success
+        border-color: $success
+        color: $white
+        box-shadow: none
+        text-transform: uppercase
 
 body
   font-family: $mainFont

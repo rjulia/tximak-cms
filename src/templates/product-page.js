@@ -39,10 +39,10 @@ export const ProductTemplate = ({
         </div>
         <div className={`product__content ${classPrice}`}>
           <p className="product__brand">Marca: L'oreal</p>
-          <p className="product__price">{price}</p>
+          <p className="product__price">{price} €</p>
           <p className="product__discount">
             <span className="product__discount--text">OFERTA:</span>
-            {price_discount}
+            {price_discount} €
           </p>
           <div className="product__button">
             <button className="btn" onClick={() => setOpen(true)}>Solicitar</button>
@@ -56,7 +56,23 @@ export const ProductTemplate = ({
 
         </div>
       </div>
-      <ContactForm />
+      {open ?
+        <div className="conact__form">
+          <div className="contact__form--container">
+            <div className="conact__form--header">
+              <div className="contact__form--textheader">
+                <p>Encargar:</p>
+                <h2>{title}</h2>
+              </div>
+              <button className="btn is-danger" onClick={() => setOpen(false)}>X</button>
+            </div>
+            <div className="contact__form--body">
+              <ContactForm product={title} price={price} />
+            </div>
+          </div>
+        </div>
+        : null}
+
     </section>
   )
 }
