@@ -153,6 +153,7 @@ $menu-label-color: $white-ter
       display: flex
       flex-direction: row
       margin-bottom: 20px
+      justify-content: space-between
       h2
         padding-right: 50px
         font-size: 24px
@@ -171,6 +172,14 @@ $menu-label-color: $white-ter
         color: $white
         box-shadow: none
         text-transform: uppercase
+        &:disabled 
+          opacity: 0.3
+          cursor: none
+      .total__price
+        font-size: 20px
+        span
+          font-weight: 700
+
 
 body
   font-family: $mainFont

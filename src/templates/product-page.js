@@ -23,7 +23,11 @@ export const ProductTemplate = ({
   const PostContent = contentComponent || Content;
   const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
-  console.log(open)
+
+  const closed = () => {
+    setOpen(false)
+  }
+
   return (
     <section className="section product">
       {helmet || ''}
@@ -67,7 +71,11 @@ export const ProductTemplate = ({
               <button className="btn is-danger" onClick={() => setOpen(false)}>X</button>
             </div>
             <div className="contact__form--body">
-              <ContactForm product={title} price={price} />
+              <ContactForm
+                product={title}
+                price={price}
+                onClick={closed}
+              />
             </div>
           </div>
         </div>
