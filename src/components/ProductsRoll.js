@@ -6,7 +6,6 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 class ProductsRoll extends React.Component {
   render() {
     const { data } = this.props;
-    console.log(data)
     const { edges: product } = data.allMarkdownRemark;
     return product && product.map(({ node: product }) => (
 

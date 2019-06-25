@@ -6,6 +6,18 @@
   .full-width-image-container {
     background-position: top;
   }
+}
+
+.products__body {
+  margin-top: 0;
+  padding-top: 0;
+
+  .products__filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
   .products__contatiner {
     display: flex;
