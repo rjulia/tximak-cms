@@ -2,6 +2,7 @@
 templateKey: product-page
 title: Champu cabello seco
 size: 500 ml
+category: capillary
 description: Champu ideal para cabellos secos y castigado por el sol
 featuredpost: true
 image: /img/a-ox_vitamino_color_shampoo_1500_ml.jpg
