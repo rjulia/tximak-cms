@@ -39,18 +39,15 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Tamaño", name: "size", widget: "string"}
+      - {label: "Imagen", name: "image", widget: image}
       - {label: "Categoria", name: "category", widget: "select",
-         options:[
-          { label: "Todos", value: "all" },
-          { label: "Capilar", value: "capillary" },
-          { label: "Corporal", value: "bodily" },
-          { label: "Facial", value: "facial" },
-          { label: "otros", value: "others" },
-         ]
-        }
+         options:[  { label: "Todos", value: "all" },
+                    { label: "Capilar", value: "capillary" },
+                    { label: "Corporal", value: "bodily" },
+                    { label: "Facial", value: "facial" },
+                    { label: "otros", value: "others" }]}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "En portada", name: "featuredpost", widget: "boolean"}
-      - {label: "Imagen", name: "image", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Precio", name: "price", widget: "string"}
       - {label: "Descuento", name: "discount", widget: "boolean"}

@@ -26,6 +26,7 @@ class ProductsRoll extends React.Component {
             <div>
               <h4>{product.frontmatter.title}</h4>
               <p>{product.excerpt}</p>
+              <p>{product.frontmatter.category}</p>
             </div>
             <div className="product__card--button">
               <div className="product__card--price">
@@ -56,7 +57,8 @@ export default () => (
   <StaticQuery
     query={graphql`
       query ProductRollQuery {
-        allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "product-page" } } }) {
+        allMarkdownRemark(filter: { 
+          frontmatter: { templateKey: { eq: "product-page" } } }) {
           edges {
             node {
               excerpt(pruneLength:50)
@@ -67,6 +69,7 @@ export default () => (
               frontmatter {
                 description
                 title
+                category
                 price
                 price_discount
                 discount
