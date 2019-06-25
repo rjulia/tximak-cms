@@ -2,6 +2,7 @@
 templateKey: product-page
 title: 'A-OX VITAMINO COLOR SHAMPOO '
 size: 1500 ML
+category: facial
 description: >-
   L'OREAL Professionnel Vitamino Color Shampoo está creado especialmente para
   cabellos coloreados para prolongar su intensidad y aportar brillo
