@@ -2,10 +2,10 @@
 templateKey: product-page
 title: Champu cabello graso
 size: 500 ml
+image: /img/shampoo_16.9oz.jpg
 category: capillary
 description: Champu ideal para cabellos grasos y castigado spor el timepo
 featuredpost: true
-image: /img/shampoo_16.9oz.jpg
 price: '56'
 discount: true
 price_discount: '45'
