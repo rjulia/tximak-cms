@@ -15,7 +15,7 @@ const Filter = ({ filters, onSelectFilters }) => {
 }
 Filter.propTypes = {
   filters: PropTypes.array.isRequired,
-  onSelectCurrency: PropTypes.func.isRequired,
+  onSelectFilters: PropTypes.func.isRequired,
 }
 
 export default Filter

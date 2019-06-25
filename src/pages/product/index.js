@@ -7,15 +7,16 @@ import './products.scss';
 
 const ProductIndexPage = ({ data }) => {
 
-  const [filters, SetFilter] = useState([
+  const filters = [
     { label: "Todos", value: "all" },
     { label: "Capilar", value: "capillary" },
     { label: "Corporal", value: "bodily" },
     { label: "Facial", value: "facial" },
     { label: "otros", value: "others" }
-  ])
+  ]
+  const [filter, setFilter] = useState('')
   const onSelectFilters = (e) => {
-    console.log(' wors', e)
+    setFilter(e)
   }
   return (
 
@@ -50,7 +51,7 @@ const ProductIndexPage = ({ data }) => {
         </div>
         <div className="container products__contatiner">
 
-          <ProductsRoll />
+          <ProductsRoll filter={filter} />
 
         </div>
       </section>
