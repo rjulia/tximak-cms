@@ -5,10 +5,16 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ProductsRoll extends React.Component {
   render() {
-    console.log(this.props.filter)
-    const { data } = this.props;
+    console.log(this.props)
+    const { data, filter } = this.props;
     const { edges: product } = data.allMarkdownRemark;
-    return product && product.map(({ node: product }) => (
+
+    const filteredProducts = product.filter(({ node: item }) => {
+      if (filter === "all") return item
+      return item.frontmatter.category == filter
+    });
+
+    return filteredProducts && filteredProducts.map(({ node: product }) => (
 
       <div key={product.id} className="product__item">
         <div className="product__card">
@@ -53,7 +59,7 @@ ProductsRoll.propTypes = {
 }
 
 
-export default () => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query ProductRollQuery {
@@ -86,6 +92,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <ProductsRoll data={data} count={count} />}
+    render={(data) => <ProductsRoll data={data} {...props} />}
   />
 )

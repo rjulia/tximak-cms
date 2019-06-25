@@ -39,7 +39,7 @@ const ProductIndexPage = ({ data }) => {
           </h1>
       </div>
       <section className="section products__body">
-        <div className="products__filter">
+        <div className="products__filter container">
           <div className="field">
             <label className="label">Filtro</label>
             <div className="control">
