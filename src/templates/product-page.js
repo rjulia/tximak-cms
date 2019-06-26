@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
@@ -18,13 +18,17 @@ export const ProductTemplate = ({
   price,
   price_discount,
   discount,
-  shipping
+  shipping,
+  site
 }) => {
   const [open, setOpen] = useState(false);
   const PostContent = contentComponent || Content;
   const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
-  const url = window.location.href
+  let url = '';
+  useEffect(() => {
+    url = window ? window.location.href : "https://www.facebook.com/Tximak-peluqueria-205991723675399/";
+  })
   const closed = () => {
     setOpen(false)
   }
@@ -54,7 +58,7 @@ export const ProductTemplate = ({
           </div>
           <p className="product__description">{description}</p>
           <PostContent content={content} />
-          <SharePostFacebook url={url} />
+          <SharePostFacebook socialConfig={site} title={title} />
         </div>
         <div className="product__conditions">
           <h3>Condiciones: </h3>
@@ -100,6 +104,7 @@ ProductTemplate.propTypes = {
 }
 
 const Product = ({ data }) => {
+  const { site } = data
   const { markdownRemark: product } = data
   return (
     <Layout headerData={data.headerData}>
@@ -112,6 +117,7 @@ const Product = ({ data }) => {
         price_discount={product.frontmatter.price_discount}
         discount={product.frontmatter.discount}
         shipping={product.frontmatter.shipping}
+        site={site}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${product.frontmatter.title}`}</title>
@@ -138,6 +144,12 @@ export default Product
 
 export const pageQuery = graphql`
   query ProductByID($id: String!) {
+    site {
+		siteMetadata {
+        url
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html

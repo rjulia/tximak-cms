@@ -14,7 +14,6 @@ class Map extends Component {
         defaultZoom={16}
         defaultCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
       >
-        {console.log(Marker.icon)}
         <Marker
           position={{ lat: this.props.latitude, lng: this.props.longitude }}
           icon={{

@@ -63,7 +63,6 @@ ServiceTemplate.propTypes = {
 
 const Service = ({ data }) => {
   const { markdownRemark: service } = data
-  console.log(service)
   return (
     <Layout headerData={data.headerData}>
       <ServiceTemplate

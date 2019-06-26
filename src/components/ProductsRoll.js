@@ -7,8 +7,6 @@ class ProductsRoll extends React.Component {
   render() {
     const { data, filter } = this.props;
     const { edges: product } = data.allMarkdownRemark;
-
-    console.log(filter, product)
     const filteredProducts = product.filter(({ node: item }) => {
       if (filter === "all" || filter === '') return item
       return item.frontmatter.category === filter
@@ -31,8 +29,8 @@ class ProductsRoll extends React.Component {
           <div className="product__card--text">
             <div>
               <h4>{product.frontmatter.title}</h4>
+              <p className="product__card--category">{product.frontmatter.category}</p>
               <p>{product.excerpt}</p>
-              <p>{product.frontmatter.category}</p>
             </div>
             <div className="product__card--button">
               <div className="product__card--price">

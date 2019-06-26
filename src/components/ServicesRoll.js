@@ -6,7 +6,6 @@ import './ServicesRoll.scss'
 class ServicesRoll extends React.Component {
   render() {
     const { data } = this.props;
-    console.log(data)
     const { edges: service } = data.allMarkdownRemark;
     return service && service.map(({ node: service }) => (
 

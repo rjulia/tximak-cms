@@ -3,6 +3,7 @@ var proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'Tximak Ilepandegia - Tu peluqueria de confianza en Zumaia',
+    url: 'https://followfun.es',
     description:
       'Tximak es una peluqueria ubicada en Zumaia con mas de 35 años de experiencia, con alta experiencia en cortes a medida, peinados de fiesta y bodas. tambein prudes encontrar tratamientos de botos capilares, bioplaxtia, brusing plus y depilaciones con laser',
   },
