@@ -12,9 +12,9 @@ const ProductIndexPage = ({ data }) => {
     { label: "Capilar", value: "capillary" },
     { label: "Corporal", value: "bodily" },
     { label: "Facial", value: "facial" },
-    { label: "otros", value: "others" }
+    { label: "Otros", value: "others" }
   ]
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState('all')
   const onSelectFilters = (e) => {
     setFilter(e)
   }

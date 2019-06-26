@@ -5,12 +5,12 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class ProductsRoll extends React.Component {
   render() {
-    console.log(this.props)
     const { data, filter } = this.props;
     const { edges: product } = data.allMarkdownRemark;
 
+    console.log(filter, product)
     const filteredProducts = product.filter(({ node: item }) => {
-      if (filter === "all") return item
+      if (filter === "all" || filter == '') return item
       return item.frontmatter.category == filter
     });
 
