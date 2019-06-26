@@ -10,8 +10,8 @@ class ProductsRoll extends React.Component {
 
     console.log(filter, product)
     const filteredProducts = product.filter(({ node: item }) => {
-      if (filter === "all" || filter == '') return item
-      return item.frontmatter.category == filter
+      if (filter === "all" || filter === '') return item
+      return item.frontmatter.category === filter
     });
 
     return filteredProducts && filteredProducts.map(({ node: product }) => (
@@ -36,7 +36,7 @@ class ProductsRoll extends React.Component {
             </div>
             <div className="product__card--button">
               <div className="product__card--price">
-                <p>{product.frontmatter.price}</p>
+                <p>{product.frontmatter.price} €</p>
               </div>
               <Link className="button" to={product.fields.slug}>
                 Mas info →

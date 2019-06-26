@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import "./product-page.scss";
 import ContactForm from "../components/ContactForm";
+import SharePostFacebook from '../components/SharePostFacebbok'
 
 export const ProductTemplate = ({
   content,
@@ -23,7 +24,7 @@ export const ProductTemplate = ({
   const PostContent = contentComponent || Content;
   const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
-
+  const url = window.location.href
   const closed = () => {
     setOpen(false)
   }
@@ -53,6 +54,7 @@ export const ProductTemplate = ({
           </div>
           <p className="product__description">{description}</p>
           <PostContent content={content} />
+          <SharePostFacebook url={url} />
         </div>
         <div className="product__conditions">
           <h3>Condiciones: </h3>
