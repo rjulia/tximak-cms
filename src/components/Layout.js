@@ -1,9 +1,12 @@
-import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
-import useSiteMetadata from './SiteMetadata'
-import { graphql } from 'gatsby'
+import React from 'react';
+import Helmet from 'react-helmet';
+import useSiteMetadata from './SiteMetadata';
+import { graphql } from 'gatsby';
 import { Header } from "./Home";
 import Navbar from "./Navbar";
+import Cookies from "./Cookies";
+import { CookiesProvider } from 'react-cookie';
+
 
 const TemplateWrapper = ({ headerData = null, children }) => {
   const { title, description } = useSiteMetadata()
@@ -20,7 +23,7 @@ const TemplateWrapper = ({ headerData = null, children }) => {
     }
   }
   return (
-    <Fragment>
+    <CookiesProvider>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -31,7 +34,8 @@ const TemplateWrapper = ({ headerData = null, children }) => {
       <Header data={header} />
       <Navbar logo={logo} />
       <div>{children}</div>
-    </Fragment>
+      <Cookies />
+    </CookiesProvider>
   )
 }
 

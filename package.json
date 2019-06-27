@@ -34,6 +34,7 @@
     "parcel-bundler": "^1.12.3",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
+    "react-cookie": "^4.0.0",
     "react-dom": "^16.8.4",
     "react-facebook": "^8.0.4",
     "react-google-maps": "^9.4.5",

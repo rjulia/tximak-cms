@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 import Logo from "./Home/Logo/Logo";
-import './Navbar.scss'
+import './Navbar.scss';
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)

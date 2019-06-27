@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
@@ -25,10 +25,7 @@ export const ProductTemplate = ({
   const PostContent = contentComponent || Content;
   const imageSrc = !!image.childImageSharp ? image.childImageSharp.fluid.src : image;
   const classPrice = discount ? "hasDiscount" : "";
-  let url = '';
-  useEffect(() => {
-    url = window ? window.location.href : "https://www.facebook.com/Tximak-peluqueria-205991723675399/";
-  })
+
   const closed = () => {
     setOpen(false)
   }
