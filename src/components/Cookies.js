@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
+import { Link } from 'gatsby';
+
 import './Cookies.scss';
 
 const myCookies = () => {
@@ -24,7 +26,7 @@ const myCookies = () => {
     (hasAcceptCookies === true) ? "" : <div className="cookies__container">
       <div className="container">
         <div className="columns">
-          <p className=" is-four-fifths">Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información aquí (enlace a página de cookies).</p>
+          <p className=" is-four-fifths">Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, consideramos que acepta su uso. Puede cambiar la configuración u obtener más información  <Link to="/cookies">aquí</Link></p>
           <div className="column">
             <div className="btn cookies__btn" onClick={() => accept()}>ACEPTAR</div>
           </div>

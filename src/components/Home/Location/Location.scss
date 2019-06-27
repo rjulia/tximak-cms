@@ -1,11 +1,26 @@
 @import "../../../styles/variables.sass";
 
 .localitation {
-  background-image: url('/img/image_footer.jpg');
-  background-repeat: no-repeat;
-  background-position-y: bottom;
-  background-origin: content-box;
-  background-size: contain
+
+
+  .localitation__footer {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: $primary;
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      color: $white;
+    }
+
+    a {
+      font-weight: 700;
+      color: $secondary;
+      margin: 0 15px 0 5px;
+    }
+  }
 }
 
 .localitation__container {
@@ -119,6 +134,8 @@
       }
     }
   }
+
+
 
   @media (min-width: $mobile) {
     height: 100vh;

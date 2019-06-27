@@ -1,6 +1,7 @@
 import React from 'react'
 import './Location.scss'
 import Map from '../../commons/Map'
+import { Link } from "gatsby";
 import { FacebookIcon, InstagramIcon } from "../../../Assets/index";
 
 const Location = ({ location }) => {
@@ -33,6 +34,9 @@ const Location = ({ location }) => {
             latitude={latitude}
             longitude={longitude} />
         </div>
+      </div>
+      <div className="localitation__footer">
+        <p> © Tximak Ileapaindegia 2019 - <span><Link to="/cookies">Politica de Cokkies</Link> </span>  | Design by: <span><a href="https://nitroclik.com" target="_blank" rel="noopener noreferrer">Nitroclik</a> </span></p>
       </div>
     </div>
   )
