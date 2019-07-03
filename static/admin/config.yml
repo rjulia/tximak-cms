@@ -29,7 +29,7 @@ collections:
       - {label: "Precio", name: "price", widget: "string", required: false}
       - {label: "Descuento", name: "discount", widget: "boolean", required: false}
       - {label: "Precio Descuento", name: "price_discount", widget: "string", required: false}
-      - {label: "Image", name: "image", widget: image}
+      - {label: "Image", name: "image", widget: "image"}
   - name: "product"
     label: "Productos"
     folder: "src/pages/product"
@@ -39,7 +39,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Tamaño", name: "size", widget: "string"}
-      - {label: "Imagen", name: "image", widget: image}
+      - {label: "Imagen", name: "image", widget: "image"}
       - {label: "Categoria", name: "category", widget: select, required: false,
           default: [{ label: "Todos", value: "all" }],
           options: [{ label: "Todos", value: "all" },
@@ -63,7 +63,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Logo, name: logo, widget: image}
+          - {label: Logo, name: logo, widget: "image"}
           - {
               label: "Location",
               name: "location",
@@ -89,7 +89,7 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {label:  Image, name: image, widget: image}
+                        {label:  Image, name: image, widget: "image"}
                       ]
                 },
                 {
@@ -100,7 +100,7 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {label:  Image, name: image, widget: image}
+                        {label:  Image, name: image, widget: "image"}
                       ]
                 },
                 {
@@ -111,7 +111,7 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {label:  Image, name: image, widget: image}
+                        {label:  Image, name: image, widget: "image"}
                       ]
                 },
                 {
@@ -122,7 +122,7 @@ collections:
                       [
                         { label: "Heading", name: "heading", widget: "string" },
                         { label: "Sub Heading", name: "subHeading", widget: "string" },
-                        {label:  Image, name: image, widget: image}
+                        {label:  Image, name: image, widget: "image"}
                       ]
                 },
               ]
