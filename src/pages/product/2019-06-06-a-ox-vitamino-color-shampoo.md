@@ -1,13 +1,13 @@
 ---
 templateKey: product-page
-title: 'A-OX VITAMINO COLOR SHAMPOO '
-size: 1500 ML
-category: facial
+title: Champú para cabellos largos y lacios
+size: 250 ML
+image: /img/champu_higo_naranja.jpeg
+category: capillary
 description: >-
-  L'OREAL Professionnel Vitamino Color Shampoo está creado especialmente para
-  cabellos coloreados para prolongar su intensidad y aportar brillo
+  Champú para cabellos largos y lacios, anti-encrespamiento, a base de higo
+  chumbo y naranja.
 featuredpost: true
-image: /img/a-ox_vitamino_color_shampoo_1500_ml.jpg
 price: '68'
 discount: true
 price_discount: '48'
@@ -15,14 +15,4 @@ shipping: >-
   No esta incluidos  los gastos de envíos , Podrás recogerlo en nuestro
   establecimiento en Horario comercial de martes a sábado  ambos inclusive
 ---
-L'OREAL Professionnel Vitamino Color Shampoo está creado especialmente para cabellos coloreados para prolongar su intensidad y aportar brillo.  Después de aplicar, su cliente debe sentir que es ligero, desenredado, suave y brillante.  1500ml.
-
-Instrucciones de uso:
-
-
-
-Distribuir uniformemente a través del cabello mojado y la espuma.
-
-Enjuague bien.
-
-Repita el proceso si es necesario.
+ALFAPARF - Milano - Precious nature - Champú para cabellos largos y lacios, anti-encrespamiento, a base de higo chumbo y naranja.
