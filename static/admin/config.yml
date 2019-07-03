@@ -40,7 +40,7 @@ collections:
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Tamaño", name: "size", widget: "string"}
       - {label: "Imagen", name: "image", widget: image}
-      - {label: "Categoria", name: "category", widget: "select", required: false,
+      - {label: "Categoria", name: "category", widget: select, required: false,
          options:[  { label: "Todos", value: "all" },
                     { label: "Capilar", value: "capillary" },
                     { label: "Corporal", value: "bodily" },
