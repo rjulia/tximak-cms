@@ -1,6 +1,6 @@
 ---
 templateKey: product-page
-title: Reconstructor de pelo dañado
+title: Reconstructor de Pelo Dañado
 size: 125 ml
 image: /img/reconstructor-de-pelo-danado.jpeg
 category: capillary
