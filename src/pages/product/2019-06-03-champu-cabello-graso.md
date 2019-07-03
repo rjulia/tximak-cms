@@ -1,16 +1,18 @@
 ---
 templateKey: product-page
-title: Champu cabello graso
-size: 500 ml
+title: Reconstructor de pelo dañado
+size: 125 ml
+image: /img/reconstructor-de-pelo-danado.jpeg
 category: capillary
-description: Champu ideal para cabellos grasos y castigado spor el timepo
+description: >-
+  Fluido diario anti rotura, para cabellos quebradizos, le da a tu pelo fuerza y
+  vitalidad.
 featuredpost: true
-image: /img/a-ox_vitamino_color_shampoo_1500_ml.jpg
-price: '56'
-discount: true
-price_discount: '45'
+price: '24,25'
+discount: false
+price_discount: '00'
 shipping: >-
-  No esta includios los gastos de envios, Podrás recogerlo en nuestro
-  establecimiento en Horario comercial de martes a sabado ambos inclusibe.
+  No esta incluidos los gastos de envío, Podrás recogerlo en nuestro
+  establecimiento en Horario comercial de martes a sábado  ambos inclusive.
 ---
-Un cabello fuerte y falto de graso siempre sintoma de salud en el cabello, Con este champu podras lucir un cabello como nunca.
+Fluido diario anti rotura, para cabellos quebradizos, le da a tu pelo fuerza y vitalidad.
