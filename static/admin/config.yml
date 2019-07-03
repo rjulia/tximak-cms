@@ -40,17 +40,13 @@ collections:
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Tamaño", name: "size", widget: "string"}
       - {label: "Imagen", name: "image", widget: image}
-      - { label: "Categoria", 
-          name: "category", 
-          widget: select, 
-          required: false,
-          options: 
-          - { label: "Todos", value: "all" },
-          - { label: "Capilar", value: "capillary" },
-          - { label: "Corporal", value: "bodily" },
-          - { label: "Facial", value: "facial" },
-          - { label: "otros", value: "others" }
-        }
+      - {label: "Categoria", name: "category", widget: select, required: false,
+          default: [{ label: "Todos", value: "all" }],
+          options: [{ label: "Todos", value: "all" },
+                    { label: "Capilar", value: "capillary" },
+                    { label: "Corporal", value: "bodily" },
+                    { label: "Facial", value: "facial" },
+                    { label: "otros", value: "others" }]}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "En portada", name: "featuredpost", widget: "boolean", required: false}
       - {label: "Body", name: "body", widget: "markdown", required: false}
