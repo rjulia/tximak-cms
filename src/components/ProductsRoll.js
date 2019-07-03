@@ -5,14 +5,14 @@ import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 class ProductsRoll extends React.Component {
   render() {
-    const { data, filter } = this.props;
+    const { data } = this.props;
     const { edges: product } = data.allMarkdownRemark;
-    const filteredProducts = product.filter(({ node: item }) => {
-      if (filter === "all" || filter === '') return item
-      return item.frontmatter.category === filter
-    });
+    // const filteredProducts = product.filter(({ node: item }) => {
+    //   if (filter === "all" || filter === '') return item
+    //   return item.frontmatter.category === filter
+    // });
 
-    return filteredProducts && filteredProducts.map(({ node: product }) => (
+    return product && product.map(({ node: product }) => (
 
       <div key={product.id} className="product__item">
         <div className="product__card">
@@ -73,7 +73,6 @@ export default (props) => (
               frontmatter {
                 description
                 title
-                category
                 price
                 price_discount
                 discount

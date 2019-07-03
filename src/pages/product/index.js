@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { graphql } from "gatsby";
-import Filter from '../../components/Filter';
+// import Filter from '../../components/Filter';
 import Layout from '../../components/Layout'
 import ProductsRoll from '../../components/ProductsRoll'
 import './products.scss';
 
 const ProductIndexPage = ({ data }) => {
 
-  const filters = [
-    { label: "Todos", value: "all" },
-    { label: "Capilar", value: "capillary" },
-    { label: "Corporal", value: "bodily" },
-    { label: "Facial", value: "facial" },
-    { label: "Otros", value: "others" }
-  ]
-  const [filter, setFilter] = useState('all')
-  const onSelectFilters = (e) => {
-    setFilter(e)
-  }
+  // const filters = [
+  //   { label: "Todos", value: "all" },
+  //   { label: "Capilar", value: "capillary" },
+  //   { label: "Corporal", value: "bodily" },
+  //   { label: "Facial", value: "facial" },
+  //   { label: "Otros", value: "others" }
+  // ]
+  // const [filter, setFilter] = useState('all')
+  // const onSelectFilters = (e) => {
+  //   setFilter(e)
+  // }
   return (
 
     <Layout headerData={data.headerData}>
@@ -39,7 +39,7 @@ const ProductIndexPage = ({ data }) => {
           </h1>
       </div>
       <section className="section products__body">
-        <div className="products__filter container">
+        {/* <div className="products__filter container">
           <div className="field">
             <label className="label">Filtro</label>
             <div className="control">
@@ -48,10 +48,10 @@ const ProductIndexPage = ({ data }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="container products__contatiner">
 
-          <ProductsRoll filter={filter} />
+          <ProductsRoll />
 
         </div>
       </section>
