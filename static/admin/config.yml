@@ -45,10 +45,10 @@ collections:
           widget: select, 
           required: false,
           options: 
-          - { label: "Todos", value: "all" }
-          - { label: "Capilar", value: "capillary" }
-          - { label: "Corporal", value: "bodily" }
-          - { label: "Facial", value: "facial" }
+          - { label: "Todos", value: "all" },
+          - { label: "Capilar", value: "capillary" },
+          - { label: "Corporal", value: "bodily" },
+          - { label: "Facial", value: "facial" },
           - { label: "otros", value: "others" }
         }
       - {label: "Description", name: "description", widget: "text"}
