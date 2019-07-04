@@ -2,7 +2,7 @@
 templateKey: product-page
 title: Reconstructor de Pelo Dañado
 size: 125 ml
-image: /img/reconstructor-de-pelo-danado.jpeg
+image: /img/reconstructor2.jpeg
 description: >-
   Fluido diario anti rotura, para cabellos quebradizos, le da a tu pelo fuerza y
   vitalidad.
