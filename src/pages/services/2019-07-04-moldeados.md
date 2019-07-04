@@ -1,0 +1,9 @@
+---
+templateKey: service-page
+title: MOLDEADOS
+description: >-
+  on productos de alta calidad,y permanente ácida el cual mantiene la cutícula
+  en buen estado y rizo deseado
+image: /img/flavor_wheel.jpg
+---
+
