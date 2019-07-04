@@ -2,7 +2,7 @@
 templateKey: product-page
 title: Champú para cabellos rizados y ondulados
 size: 100 ml
-image: /img/aceite_uva_labanda.jpeg
+image: /img/oli-lavander.jpg
 description: >
   Champú para cabellos rizados y ondulados con Uva y Lavanda. Mejora la
   capacidad de pelado al instante y reduce el tiempo de secado y peinado
