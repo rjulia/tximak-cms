@@ -28,7 +28,7 @@ class ProductsRoll extends React.Component {
           <div className="product__card--text">
             <div>
               <h4>{product.frontmatter.title}</h4>
-              <p className="product__card--category">{_.lowerCase(product.frontmatter.size)}</p>
+              <p className="product__card--category">{product.frontmatter.size ? _.lowerCase(product.frontmatter.size) : ""}</p>
               <p>{product.excerpt}</p>
             </div>
             <div className="product__card--button">
