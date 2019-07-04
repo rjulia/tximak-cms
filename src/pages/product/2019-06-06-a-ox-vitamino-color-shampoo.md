@@ -2,7 +2,7 @@
 templateKey: product-page
 title: Champú para cabellos largos y lacios
 size: 250 ML
-image: /img/champu_higo_naranja.jpeg
+image: /img/champo-orange.jpg
 description: >-
   Champú para cabellos largos y lacios, anti-encrespamiento, a base de higo
   chumbo y naranja.

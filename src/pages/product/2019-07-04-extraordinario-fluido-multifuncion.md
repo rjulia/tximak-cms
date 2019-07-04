@@ -2,7 +2,7 @@
 templateKey: product-page
 title: Extraordinario Fluido Multifuncion
 size: 125 ml
-image: /img/fluido_multifuncion.jpeg
+image: /img/sdl_diamond_extraordinaryall-in-1-fluid.png
 description: 'Líquido sin enjuague multifuncional '
 price: '22,50'
 shipping: >-
