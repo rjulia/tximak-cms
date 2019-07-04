@@ -21,7 +21,8 @@ export const ProductTemplate = ({
   price_discount,
   discount,
   shipping,
-  site
+  site,
+  size
 }) => {
   const [open, setOpen] = useState(false);
   const PostContent = contentComponent || Content;
@@ -46,7 +47,7 @@ export const ProductTemplate = ({
           <img src={imageSrc} alt="" />
         </div>
         <div className={`product__content ${classPrice}`}>
-          <p className="product__brand">Marca: L'oreal</p>
+          <p className="product__brand">{size}</p>
           <p className="product__price">{price} €</p>
           <p className="product__discount">
             <span className="product__discount--text">OFERTA:</span>
@@ -117,6 +118,7 @@ const Product = ({ data }) => {
         discount={product.frontmatter.discount}
         shipping={product.frontmatter.shipping}
         site={site}
+        size={product.frontmatter.size}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${product.frontmatter.title}`}</title>
@@ -160,7 +162,7 @@ export const pageQuery = graphql`
         discount
         price_discount
         shipping
-        image{ 
+        image { 
           childImageSharp {
             fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
