@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Content, { HTMLContent } from '../components/Content';
 import "./product-page.scss";
 import ContactForm from "../components/ContactForm";
-import SharePostFacebook from '../components/SharePostFacebbok'
+import SharePostFacebook from '../components/SharePostFacebbok';
+import _ from 'lodash';
+
 
 export const ProductTemplate = ({
   content,
@@ -53,13 +55,13 @@ export const ProductTemplate = ({
           <div className="product__button">
             <button className="btn" onClick={() => setOpen(true)}>Solicitar</button>
           </div>
-          <p className="product__description">{description}</p>
-          <PostContent content={content} />
+          <p className="product__description">{_.upperFirst(description)}</p>
+          <PostContent content={_.upperFirst(content)} />
           <SharePostFacebook socialConfig={site} title={title} />
         </div>
         <div className="product__conditions">
           <h3>Condiciones: </h3>
-          <p>{shipping}</p>
+          <p>{_.upperFirst(shipping)}</p>
 
         </div>
       </div>

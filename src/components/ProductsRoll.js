@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery, Link } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
+import _ from 'lodash';
 
 class ProductsRoll extends React.Component {
   render() {
@@ -20,16 +21,14 @@ class ProductsRoll extends React.Component {
             <PreviewCompatibleImage
               imageInfo={{
                 image: product.frontmatter.image,
-                alt: `featured image thumbnail for product ${
-                  product.title
-                  }`,
+                alt: product.title
               }}
             />
           </div>
           <div className="product__card--text">
             <div>
               <h4>{product.frontmatter.title}</h4>
-              <p className="product__card--category">{product.frontmatter.category}</p>
+              <p className="product__card--category">{_.lowerCase(product.frontmatter.size)}</p>
               <p>{product.excerpt}</p>
             </div>
             <div className="product__card--button">
@@ -65,7 +64,7 @@ export default (props) => (
           frontmatter: { templateKey: { eq: "product-page" } } }) {
           edges {
             node {
-              excerpt(pruneLength:50)
+              excerpt(pruneLength:80)
               id
               fields {
                 slug
@@ -74,6 +73,7 @@ export default (props) => (
                 description
                 title
                 price
+                size
                 price_discount
                 discount
                 image {

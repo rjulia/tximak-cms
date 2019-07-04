@@ -10,10 +10,7 @@ const ProductPreview = ({ entry, widgetFor }) => (
     size={entry.getIn(['data', 'size'])}
     price={entry.getIn(['data', 'price'])}
     priceDiscount={entry.getIn(['data', 'price_discount'])}
-    content={widgetFor('shipping')}
-    image={entry.getIn(['data', 'image'])}
-
-
+    shipping={widgetFor('shipping')}
   />
 )
 
