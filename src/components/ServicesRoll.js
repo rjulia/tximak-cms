@@ -28,11 +28,6 @@ class ServicesRoll extends React.Component {
               <p>{service.frontmatter.description}</p>
             </div>
 
-            <div className="services__card--price">
-              <p>{service.frontmatter.price} €</p>
-            </div>
-
-
           </div>
         </div>
       </div>

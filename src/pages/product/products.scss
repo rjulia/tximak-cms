@@ -25,9 +25,9 @@
     flex-direction: row;
 
     .product__item {
-      flex: 1 1 33%;
-      max-width: 33%;
-      padding: 30px;
+      flex: 1 1 100%;
+      max-width: 100%;
+      padding: 10px 0;
       //border: 1px solid #ccc;
 
       .product__card {
@@ -41,7 +41,7 @@
         overflow: hidden;
         //margin-bottom: 10px;
         padding-bottom: 10px;
-        flex: 0 0 400px;
+        flex: 0 0 200px;
         overflow: hidden;
 
       }
@@ -102,6 +102,22 @@
           font-size: 35px;
           color: $secondary;
           font-family: $mainFont;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    .products__contatiner {
+      .product__item {
+        flex: 1 1 33%;
+        max-width: 33%;
+        padding: 30px;
+
+        .product__card--image {
+
+          flex: 0 0 400px;
+
         }
       }
     }

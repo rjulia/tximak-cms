@@ -17,7 +17,7 @@
 
     .services__item {
       width: 100%;
-      padding: 20px;
+      padding: 10px 0;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -83,7 +83,7 @@
     .services__contatiner {
       .services__item {
         width: 33%;
-
+        padding: 20px;
       }
     }
   }

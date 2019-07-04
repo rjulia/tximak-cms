@@ -11,9 +11,21 @@
 
   }
 
+  .navbar-burger {
+
+    margin-top: 10px;
+  }
+
   .navbar-burger.is-active {
     background-color: #fff;
 
+  }
+
+  @media (min-width: $mobile) {
+    .navbar-burger {
+
+      margin-top: 0px;
+    }
   }
 }
 
