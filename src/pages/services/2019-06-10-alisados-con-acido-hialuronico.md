@@ -5,6 +5,6 @@ description: 'de larga duración con acido hialurónico, alta calidad en el cabe
 price: '56'
 discount: true
 price_discount: '45'
-image: /img/peloliso.jpg
+image: /img/flavor_wheel.jpg
 ---
 
