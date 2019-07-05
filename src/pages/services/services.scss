@@ -38,6 +38,11 @@
       width: 100%;
       max-height: 250px;
       overflow: hidden;
+      min-height: 250px;
+
+      .gatsby-image-wrapper {
+        height: 100%;
+      }
 
       img {
         width: auto;
