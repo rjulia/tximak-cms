@@ -50,10 +50,10 @@ slideshow:
 ourteam:
   body: >-
     Un equipo de tres profesionales capacitado para realizar cualquier tipo de
-    trabajo  de peluquería , Con m'as de 40 años de experiencia,  Tximak siempre
-    se ha caracterizado por dar un servicio  de calidad, rapidez y tratamos el
-    cabello de nuestras clientes con los mejores productos adecuados a cada
-    cabello.
+    trabajo de peluquería. Con años de experiencia y siempre a la última, 
+    Tximak siempre se ha caracterizado por dar un servicio de calidad, rapidez y
+    tratamos el cabello de nuestras clientes con los mejores productos adecuados
+    a cada cabello.
   image: /img/peinar.jpg
   imageAlt: Antto Extabe peinando en la peluquería Tximak
   title: Nuestro Equipo
